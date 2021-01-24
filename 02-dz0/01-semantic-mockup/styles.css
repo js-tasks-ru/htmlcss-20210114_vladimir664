@@ -12,13 +12,9 @@ nav {
     text-align: center;
 }
 
-nav > h1 > span {
-    text-decoration: underline;
-}
-
 main {
     background-color: #91ff14;
-    padding: 5px 15px;
+    padding: 20px 15px;
 }
 
 footer {
@@ -29,8 +25,11 @@ footer {
 
 article {
     background-color: #3200e6;
+    padding: 10px 15px;
+    margin: 5px;
 }
 
-nav > h1, footer > h1 {
+h2 {
     margin: 0;
+    padding: 20px 15px;
 }
