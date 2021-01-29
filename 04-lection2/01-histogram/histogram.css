@@ -1,0 +1,132 @@
+.container {
+    /* height: 100vh; */
+    min-height: 185px;
+    min-width: 215px;
+    display: flex;
+}
+
+.histogram {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100%;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #ACB5BD;
+    padding: 16px 24px 24px;
+}
+
+.histogram__header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.histogram__name {
+    padding-bottom: 6px;
+}
+
+.histogram__number {
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.histogram__button a {
+    text-decoration: none;
+}
+
+.histogram__columns-block {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+
+.histogram__column {
+    background-color: #4263EB;
+    flex-grow: 1;
+    margin: 1px;
+}
+
+.histogram__column_col1 {
+    height: 45%;
+}
+
+.histogram__column_col2 {
+    height: 25%;
+}
+
+.histogram__column_col3 {
+    height: 80%;
+}
+
+.histogram__column_col4 {
+    height: 50%;
+}
+
+.histogram__column_col5 {
+    height: 10%;
+}
+
+.histogram__column_col6 {
+    height: 45%;
+}
+
+.histogram__column_col7 {
+    height: 25%;
+}
+
+.histogram__column_col8 {
+    height: 80%;
+}
+
+.histogram__column_col9 {
+    height: 50%;
+}
+
+.histogram__column_col10 {
+    height: 10%;
+}
+.histogram__column_col11 {
+    height: 45%;
+}
+
+.histogram__column_col12 {
+    height: 25%;
+}
+
+.histogram__column_col13 {
+    height: 80%;
+}
+
+.histogram__column_col14 {
+    height: 50%;
+}
+
+.histogram__column_col15 {
+    height: 10%;
+}
+.histogram__column_col16 {
+    height: 45%;
+}
+
+.histogram__column_col17 {
+    height: 25%;
+}
+
+.histogram__column_col18 {
+    height: 80%;
+}
+
+.histogram__column_col19 {
+    height: 50%;
+}
+
+.histogram__column_col20 {
+    height: 10%;
+}
+
+
