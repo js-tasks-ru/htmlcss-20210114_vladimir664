@@ -25,11 +25,11 @@ div {
     cursor: pointer;
 }
 
-.button:disabled {
+.button:disabled,
+.button:disabled:hover {
     opacity: 50%;
-    pointer-events: none;
+    cursor: not-allowed;
 }
-
 
 /* Стилизация кнопки primary*/
 
@@ -39,7 +39,7 @@ div {
     color: #fff;
 }
 
-.button_primary:hover {
+.button_primary:hover:not(:disabled) {
     background-color: #2342C0;
 }
 
@@ -51,7 +51,7 @@ div {
     color: #fff;
 }
 
-.button_secondary:hover {
+.button_secondary:hover:not(:disabled) {
     background-color: #5028C6;
 }
 
@@ -63,6 +63,6 @@ div {
     color: #495057;
 }
 
-.button_alternate:hover {
+.button_alternate:hover:not(:disabled) {
     border: 1px solid #212429;
 }
