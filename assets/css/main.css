@@ -3,3 +3,9 @@
 * {
     font-family: 'Roboto', sans-serif;
 }
+
+.container {
+    min-height: 185px;
+    min-width: 215px;
+    display: flex;
+}

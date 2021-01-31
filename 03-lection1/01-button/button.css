@@ -36,14 +36,11 @@ div {
 .button_primary {
     background-color: #4263EB;
     border: none;
+    color: #fff;
 }
 
 .button_primary:hover {
     background-color: #2342C0;
-}
-
-.button__text_primary {
-    color: #fff;
 }
 
 /* Стилизация кнопки secondary*/
@@ -51,14 +48,11 @@ div {
 .button_secondary {
     background-color: #7048E8;
     border: none;
+    color: #fff;
 }
 
 .button_secondary:hover {
     background-color: #5028C6;
-}
-
-.button__text_secondary {
-    color: #fff;
 }
 
 /* Стилизация кнопки alternate*/
@@ -66,12 +60,9 @@ div {
 .button_alternate {
     background-color: #fff;
     border: 1px solid #ACB5BD;
+    color: #495057;
 }
 
 .button_alternate:hover {
     border: 1px solid #212429;
-}
-
-.button__text_alternate {
-    color: #495057;
 }
