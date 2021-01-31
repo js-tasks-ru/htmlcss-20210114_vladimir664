@@ -10,6 +10,13 @@ header {
 nav {
     background-color: #ff7b00;
     text-align: center;
+    margin: 0;
+    padding: 20px 15px;
+}
+
+nav a {
+    font-weight: 600;
+    font-size: 20px;
 }
 
 main {
@@ -27,9 +34,4 @@ article {
     background-color: #3200e6;
     padding: 10px 15px;
     margin: 5px;
-}
-
-h2 {
-    margin: 0;
-    padding: 20px 15px;
 }
