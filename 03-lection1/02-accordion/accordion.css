@@ -1,7 +1,5 @@
 /* Стилизация аккордеона */
 .accordion__item {
-    width: 579px;
-    height: 72px;
     border: 1px solid #ACB5BD;
     box-sizing: border-box;
     border-radius: 8px;
@@ -33,36 +31,36 @@
     padding: 24px 32px;
     outline: none;
     list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
 }
 
 .accordion__summary::-webkit-details-marker {
     display: none
 }
 
-.accordion__summary-text {
-    width: 95%;
-    display: inline-block;
+.accordion__marker {
+    transform: rotate(45deg);
+    width: 10px;
+    height: 10px;
+    border-radius: 1px;
 }
 
-.accordion__marker {
-    display: inline-block;
-    transform: rotate(45deg);
+.accordion__item:not([open]) .accordion__marker_open, 
+.accordion__item[open] .accordion__marker_closed {
+    display: none;
 }
 
 .accordion__item:not([open]) .accordion__marker_closed {
-    width: 10px;
-    height: 10px;
     border-right: 2px solid #495057;
     border-bottom: 2px solid #495057;
-    border-radius: 1px;
 }
 
 .accordion__item[open] .accordion__marker_open {
-    width: 10px;
-    height: 10px;
     border-left: 2px solid #495057;
     border-top: 2px solid #495057;
-    border-radius: 1px;
 }
 
 .accordion__details-text {
