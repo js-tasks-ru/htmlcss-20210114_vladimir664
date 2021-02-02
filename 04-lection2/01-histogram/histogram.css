@@ -7,6 +7,7 @@
     border-radius: 8px;
     border: 1px solid #ACB5BD;
     padding: 16px 24px 24px;
+    box-sizing: border-box;
 }
 
 .histogram__header {
@@ -26,7 +27,7 @@
     line-height: 28px;
 }
 
-.histogram__button a {
+.histogram__button {
     text-decoration: none;
 }
 
