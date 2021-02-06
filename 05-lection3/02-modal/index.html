@@ -4,9 +4,25 @@
     <head>
         <link rel="stylesheet" href="../../assets/css/main.css">
         <link rel="stylesheet" href="./modal.css">
+        <link rel="stylesheet" href="../styles.css">
+
         <title>Modal</title>
     </head>
     <body>
+        <div class="wrap-container">
+            <button id="modal-open" class="button">
+                <span class="button__text">Push the tempo</span>
+            </button>            
+        </div>
+        <div id="modal">
+            <div class="modal__container">
+                <div id="modal-close">
+                    <div class="modal__close-mark"></div>
+                </div>
+                <div class="modal__header">Modal header</div>
+                <div class="modal__content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente, quod totam numquam doloremque iusto, voluptates obcaecati, velit animi vitae blanditiis tempora. Doloremque, fugit. Fuga ipsa excepturi odio similique possimus voluptates.</div>
+            </div>
+        </div>
     </body>
     <script src="./index.js"></script> 
 </html>
