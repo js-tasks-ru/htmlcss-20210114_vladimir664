@@ -19,9 +19,17 @@
 .calendar__day {
     padding: 6px;
     font-size: 15px;
+    height: 18px;
+    width: 18px;
+    text-align: center;
 }
 
-.calendar__day18 {
+.calendar__day_active {
+    background-color: #A0B1F5;
+}
+
+.calendar__day_active-last ,
+.calendar__day_active-first{
     background-color: #4263EB;
     color:white;
 }
