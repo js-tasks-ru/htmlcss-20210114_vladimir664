@@ -1,4 +1,6 @@
 .input {
+    width: fit-content;
+    position: relative;
     margin: 30px;
     display: flex;
     flex-direction: column;
@@ -11,11 +13,20 @@
     border: 1px solid #DDE2E5;
     font-size: 20px;
     padding-left: 24px;
+    box-sizing: border-box;
 }
 
 .input__field::placeholder {
     text-transform: capitalize;
-    color: #DDE2E5;
+    color: #495057;
+}
+
+.input__field[disabled] {
+    cursor: not-allowed;
+}
+
+.input__field[disabled]::placeholder {
+    color: #ACB5BD;
 }
 
 .input__label {
@@ -29,17 +40,38 @@
 .input__field:invalid{
     border: 1px solid #F03D3E;
     box-shadow: 0px 1px 1px rgba(240, 61, 62, 0.1);
-    box-sizing: border-box;
 }
 
 .input__field:valid {
-    border: 1px solid blue;
-    box-sizing: border-box;
+    border:  1px solid #DDE2E5;
     box-shadow: 0px 1px 1px rgba(240, 61, 62, 0.1);
 }
 
 .input__field:placeholder-shown {
-    color: red;
     border: 1px solid #DDE2E5;
+}
 
+.input__field:focus:not(:invalid) {
+    border: 1px solid #4263EB;
+    box-shadow: 0px 1px 1px rgba(240, 61, 62, 0.1);  
+}
+
+.input__state {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    right: 8px;
+    top: 31px;
+}
+
+.input__field:placeholder-shown ~ .input__state {
+    background-image: none;
+}
+
+.input__field:not(:placeholder-shown):valid ~ .input__state {
+    background-image: url('./svg/verified.svg');
+}
+
+.input__field:invalid ~ .input__state {
+    background-image: url('./svg/alert.svg');
 }

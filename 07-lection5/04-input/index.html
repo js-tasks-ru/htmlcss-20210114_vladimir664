@@ -9,19 +9,24 @@
         <form>
             <label class="input">
                 <span class="input__label">Label</span>
-                <input class="input__field" type="text" pattern="\d*" name="lastname" placeholder="placeholder">
+                    <input class="input__field" type="text" pattern="\d*" name="lastname" placeholder="placeholder">
+                    <div class="input__state"></div>
+                </div>
             </label>
             <label class="input">
                 <span class="input__label">Success</span>
                 <input class="input__field" type="text" pattern="\d*" name="lastname" placeholder="success" value="123">
+                <div class="input__state"></div>
             </label>
             <label class="input">
                 <span class="input__label">Error</span>
                 <input class="input__field" pattern="\d*" type="text" name="lastname" placeholder="error" value="qwe">
+                <div class="input__state"></div>
             </label>
             <label class="input">
                 <span class="input__label">Disabled</span>
                 <input class="input__field" type="text" name="lastname" placeholder="placeholder" disabled>
+                <div class="input__state"></div>
             </label>
         </form>
     </body>
