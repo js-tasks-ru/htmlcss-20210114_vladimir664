@@ -1,12 +1,12 @@
 .header {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 68px 165px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 68px 165px;
 
-    &__text {
-        font-weight: 500; 
-        font-size: 50px;
-        line-height: 64px;
-    }
+	&__text {
+		font-weight: 500; 
+		font-size: 50px;
+		line-height: 64px;
+	}
 }
