@@ -1,15 +1,17 @@
 #burger-menu-open {
     margin: 50px;
-    width: 20px;
-    height: 20px;
-    background-color: #c58b8b;
+    width: 24px;
+    height: 24px;
 }
 
 #burger-menu[data-open] #burger-menu-close {
     margin: 50px;
     width: 20px;
     height: 20px;
-    background-color: #c58b8b;
+}
+
+#burger-menu:not([data-open]) #burger-menu-close {
+    display: none;
 }
 
 #burger-menu {
@@ -17,9 +19,9 @@
     top: 0;
     width: 300px;
     height: 100%;
-    background-color: gray;
+    background-color: lightgray;
     transform: translateX(-309px);
-    transition: transform 4s ease-in-out 1s;
+    transition: transform 1s ease-in-out;
 
 }
 
