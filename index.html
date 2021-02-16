@@ -2,19 +2,38 @@
 <!-- Главная страница -->
 <html lang="ru">
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./04-lection2/01-histogram/histogram.css">
         <link rel="stylesheet" href="./assets/css/build/main.css">
     </head>
     <body>
         <header class="header">
+            <div class="header__logo">
+                <svg width="110" height="32" viewBox="0 0 110 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect y="1" width="30" height="30" fill="#212429"/>
+                    <rect x="38" width="32" height="32" rx="16" fill="#212429"/>
+                    <path d="M78 0L110 32H78V0Z" fill="#212429"/>
+                </svg>
+            </div>
             <h1 class="header__text">Reusable component library</h1>
+            <div class="header__menu">
+                <div class="header__menu-item" active>All components</div>
+                <div class="header__menu-item">Elements</div>
+                <div class="header__menu-item">Containers</div>
+                <div class="header__menu-item">Templates</div>
+            </div>
+            <div class="header__burger-button">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 12H21" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 6H21" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 18H21" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
         </header>
         <main>
             <div class="main-content">
                 <div class="container-block">
                     <div class="container-block__item">
                         <div class="container-block__item-component">
-                            <div class="histogram">
+                            <!-- <div class="histogram">
                                 <div class="histogram__header">
                                     <div class="histogram__title">
                                         <div class="histogram__name">
@@ -48,15 +67,77 @@
                                     <div class="histogram__column" style="height: 65%"></div>
                                     <div class="histogram__column" style="height: 16%"></div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
-                        <div class="container-block__item-title">Histogram</div>
+                        <div class="container-block__item-title">
+                            <div class="container-block__item-name">
+                                Component
+                            </div> 
+                            <div class="container-block__item-type">
+                                Container
+                            </div> 
+                        </div>
                     </div>
-                    <div class="container-block__item"></div>
-                    <div class="container-block__item"></div>
-                    <div class="container-block__item"></div>
-                    <div class="container-block__item"></div>
-                    <div class="container-block__item"></div>
+                    <div class="container-block__item">
+                        <div class="container-block__item-component">
+                        </div>
+                        <div class="container-block__item-title">
+                            <div class="container-block__item-name">
+                                Component
+                            </div> 
+                            <div class="container-block__item-type">
+                                Container
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="container-block__item">
+                        <div class="container-block__item-component">
+                        </div>
+                        <div class="container-block__item-title">
+                            <div class="container-block__item-name">
+                                Component
+                            </div> 
+                            <div class="container-block__item-type">
+                                Container
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="container-block__item">
+                        <div class="container-block__item-component">
+                        </div>
+                        <div class="container-block__item-title">
+                            <div class="container-block__item-name">
+                                Component
+                            </div> 
+                            <div class="container-block__item-type">
+                                Container
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="container-block__item">
+                        <div class="container-block__item-component">
+                        </div>
+                        <div class="container-block__item-title">
+                            <div class="container-block__item-name">
+                                Component
+                            </div> 
+                            <div class="container-block__item-type">
+                                Container
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="container-block__item">
+                        <div class="container-block__item-component">
+                        </div>
+                        <div class="container-block__item-title">
+                            <div class="container-block__item-name">
+                                Component
+                            </div> 
+                            <div class="container-block__item-type">
+                                Container
+                            </div> 
+                        </div>
+                    </div>
                 </div>
             </div>
         </main>

@@ -1,12 +1,50 @@
 .header {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	padding: 68px 165px;
+	padding: 16px 0 0 16px;
+	position: relative;
+
+	&__logo {
+		width: 110px;
+		height: 32px;
+		margin: auto;
+	}
 
 	&__text {
-		font-weight: 500; 
-		font-size: 50px;
-		line-height: 64px;
+		padding: 48px 71px 32px 0px;
+		font-weight: 400; 
+		font-size: 28px;
+		line-height: 38px;
+		color: #495057;
+	}
+
+	&__menu {
+		font-size: 16px;
+		line-height: 24px;
+		color: #ACB5BD;
+		overflow-x: auto;
+
+		display: flex;
+		flex-wrap: nowrap;
+
+		&-item {
+			padding-bottom: 8px;
+			margin-bottom: 7px;			
+			margin-right: 24px;
+			box-sizing: border-box;
+			flex-shrink: 0;
+			flex-grow: 0;
+			cursor: pointer; 
+		}
+
+		&-item[active] {
+			color: #212429;
+			border-bottom: 5px solid #212429;
+		}
+	}
+
+	&__burger-button {
+		height: 24px;
+		width: 24px;
+		position: absolute;
+    	top: 20px;
 	}
 }
