@@ -1,62 +1,59 @@
-.header{
-    height: 82px;
+.header {
+    background-color: lightgrey;
 }
 
-.content,
-.footer {
-    background-color: #E5E5E5;
-    display: flex;
-    justify-content: center;
-    padding-top: 36px;
+.header__logo {
+    padding-bottom: 16px;
 }
 
-.footer{
-    height: 166px;
-    color: #ACB5BD;
-    font-weight: 500px;
-    text-transform:uppercase;
-    padding-top: 92px;
-}
-
-.side-menu {
-    height: 229px;
-    width: 246px;
-    font-size: 14px;
+.component {
     padding-top: 16px;
 }
 
-.side-menu__item {
-    padding-top: 4px;
-}
-
-.side-menu__item_active {
-    color: #D84910;
-} 
-
-.side-menu__header {
+.component__header {
     font-size: 20px;
-    padding-bottom: 12px;
+    line-height: 26px;
+    color: #495057;
+    padding: 16px;
 }
 
-
-.side-menu__footer {
-    padding-top: 30px;
-}
-
-.content-box {
-    width: 825px;
-    height: 746px;
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 32px 48px;
-}
-
-.content-box__header {
-    font-size: 28px;
-}
-
-.content-box__container {
-    display: flex;
+.component__preview {
+    background-color: #D84910;
     height: 300px;
-    padding-top: 24px;    
+}
+
+.component__code-tabs {
+    padding: 16px;
+    padding-bottom: 0;
+    display: flex;
+    border-bottom: 1px solid grey;
+}
+
+.component__code-tabs div {
+    margin-right: 24px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #ACB5BD;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.component__code-tabs div[active] {
+    color: #212429;
+    border-bottom: 5px solid #212429;
+}
+
+pre.prettyprint {
+    border: none;
+}
+
+.footer {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #ACB5BD;
+    text-align: center;
+    padding: 56px 0 56px 0;
+    background-color: lightgrey;
 }
