@@ -5,24 +5,18 @@
     background-size: cover;
     background-position: center center;
     height: 225px;
-}
 
-@media (min-width: 400px) {
-    .image {
+    @media (min-width: 400px) {
         height: 432px;
         background-image: url('./public/forest_768.jpg');
     }
-}
-
-@media (min-width: 768px) {
-    .image {
+    
+    @media (min-width: 768px) {
         height: 576px;
         background-image: url('./public/forest_1024.jpg');
     }
-}
-
-@media screen and (min-width: 1024px) {
-    .image {
+    
+    @media screen and (min-width: 1024px) {
         height: 1440px;
         background-image: url('./public/forest_2560.jpg');
     }

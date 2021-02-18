@@ -1,0 +1,61 @@
+.calendar {
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+    display: grid;
+    grid-template-rows: 15% 10% 1fr;
+    padding: 5%;
+    box-sizing: border-box;
+    border: 1px solid darkgray;
+
+
+    &__header {
+        text-align: center;
+        font-weight: 600;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    &__day {
+        // padding: 6px;
+        // font-size: 15px;
+        // height: 18px;
+        // width: 18px;
+        padding: 2px;
+        font-size: 6px;
+        height: 7px;
+        width: 7px;
+        text-align: center;
+    }
+    
+    &__day_active {
+        background-color: #A0B1F5;
+    }
+    
+    &__day_active-last ,
+    &__day_active-first{
+        background-color: #4263EB;
+        color:white;
+    }
+    
+    &__week {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        align-items: center;
+        justify-items: center;
+        // grid-column-gap: 10px;
+        // font-size: 12px;
+
+        grid-column-gap: 4px;
+        font-size: 6px;
+    }
+    
+    &__month {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        align-items: center;
+        justify-items: center;
+    }
+    
+}

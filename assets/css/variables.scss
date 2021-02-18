@@ -1,0 +1,29 @@
+:root { 
+    //BUTTONS
+    --button-font-size: 16px;
+    --button-font-weight: 500;
+
+    /*primary*/
+    --primary-background-color: #4263EB;
+    --primary-hover-not-disabled-color: #2342C0;
+
+    /*secondary*/
+    --secondary-background-color: #7048E8;
+    --secondary-hover-not-disabled-color: #5028C6;
+
+    /*alternate*/
+    --alternate-color: #495057;
+
+    //ACCORDION
+    --accordion-marker-color: #495057;
+    --accordion-border-color: #ACB5BD;
+    --accordion-border-hover: #bebebe;
+    --accordion-border-radius: 8px;
+    --accordion-margin-bottom: 8px;
+    --accordion-summary-font-weight: 400;
+    --accordion-summary-font-size: 16px;
+    --accordion-summary-color: #212429;
+    --accordion-details-text-color: #495057;
+
+    
+}
