@@ -3,17 +3,17 @@
     width: 100%;
     border-radius: 8px;
     display: grid;
-    grid-template-rows: 15% 10% 1fr;
-    padding: 5%;
+    grid-template-rows: 20% 10% 1fr;
     box-sizing: border-box;
-    border: 1px solid darkgray;
-
+    // border: 1px solid darkgray;
+    // padding: 5%;
 
     &__header {
         text-align: center;
-        font-weight: 600;
-        margin-left: auto;
-        margin-right: auto;
+        font-weight: var(--calendar-header-font-weight);
+        margin: auto;
+        font-size: var(--calendar-header-font-size);
+        line-height: var(--calendar-header-line-height);
     }
     
     &__day {
@@ -21,21 +21,22 @@
         // font-size: 15px;
         // height: 18px;
         // width: 18px;
-        padding: 2px;
-        font-size: 6px;
-        height: 7px;
-        width: 7px;
-        text-align: center;
+        font-size: var(--calendar-day-font-size);
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     
     &__day_active {
-        background-color: #A0B1F5;
+        background-color: var(--calendar-day-active-bg);
     }
     
     &__day_active-last ,
     &__day_active-first{
-        background-color: #4263EB;
-        color:white;
+        background-color: var(--calendar-day-active-fl-bg);
+        color: var(--calendar-day-active-fl-color);
     }
     
     &__week {
@@ -47,13 +48,13 @@
         // font-size: 12px;
 
         grid-column-gap: 4px;
-        font-size: 6px;
+        font-size: var(--calendar-week-font-size);
     }
     
     &__month {
         display: grid;
         grid-template-columns: repeat(7, 1fr);
-        grid-template-rows: repeat(5, 1fr);
+        grid-template-rows: repeat(4, 1fr);
         align-items: center;
         justify-items: center;
     }

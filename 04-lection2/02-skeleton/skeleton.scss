@@ -4,7 +4,7 @@
     padding: 9px 9px 13px 9px;
 
     border-radius: 8px;
-    border: 1px solid #ACB5BD;
+    border: var(--skeleton-border);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -22,7 +22,7 @@
         height: 25px;
         width: 25px;
         border-radius: 50%;
-        background-color: #DDE2E5;
+        background-color: var(--skeleton-logo-background-color);
     }
 
     &__title {
@@ -33,7 +33,7 @@
     }
 
     &__row {
-        background: linear-gradient(0.25turn, #DDE2E5, #E2E6E8, #F3F5F5,#E3E7EA,#DDE2E5);
+        background: var(--skeleton-row-background);
         // height: 20px;
         // margin-bottom: 8px;
         height: 8px;

@@ -1,6 +1,6 @@
 .tooltip {
     cursor: pointer;
-    transform: scale(0.3);
+    transform: var(--tooltip-scale);
 
     &__circle-around {
         height: 100px;
@@ -48,7 +48,7 @@
     }
     
     &:hover .tooltip__modal-block {
-        background: blueviolet;
+        background: var(--tooltip-modal-block-color);;
         transform: translate(-42%, -154%);
     }
 
@@ -57,7 +57,7 @@
         width: 50px;
         height: 50px;
         display: block;
-        border-top: 50px solid blueviolet;
+        border-top: 50px solid var(--tooltip-modal-block-color);
         border-left: 50px solid transparent;
         border-right: 50px solid transparent;
         left: 42%;
@@ -76,7 +76,7 @@
         font-size: 4rem;
         text-align: center;
         padding-top: 100px;
-        color: white;
+        color: var(--tooltip-modal-block-text);
     }
     
 }

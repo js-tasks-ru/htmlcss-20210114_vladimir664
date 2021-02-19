@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: 1px solid #ACB5BD;
+    border: 1px solid var(--histogram-border-color);
     width: 145px;
     height: 75px;
     border-radius: 3px;
@@ -13,8 +13,8 @@
         display: flex;
         justify-content: space-between;
         font-weight: 400;
-        font-size: 6px;
-        line-height: 9px;
+        font-size: var(--histogram-font-size);
+        line-height: var(--histogram-line-height);
     }
 
     &__name {
@@ -22,8 +22,8 @@
     }
 
     &__number {
-        font-size: 8px;
-        line-height: 11px;
+        font-size: var(--histogram-number-font-size);
+        line-height: var(--histogram-number-line-height);
     }
 
     &__button {
@@ -38,7 +38,7 @@
     }
 
     &__column {
-        background-color: #4263EB;
+        background-color: var(--histogram-column-color);
         flex-grow: 1;
         margin: 1px;
     }
