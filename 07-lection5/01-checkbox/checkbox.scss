@@ -13,7 +13,7 @@
         position: absolute;
 
         &:checked ~ .checkbox__state {
-            background-color: blue;
+            background-color: var(--checkbox-active-color);
         }
 
         &:checked ~ .checkbox__state .checkbox__icon{
@@ -26,20 +26,20 @@
 
         &[disabled] ~ .checkbox__state {
             cursor: not-allowed;
-            background-color: #DDE2E5;
+            background-color: var(--checkbox-disable-color);
         }
 
         &[disabled] ~ .checkbox__legend {
             padding: 0 0 0 12px;
             margin: 0;
             cursor: not-allowed;
-            color: #DDE2E5;
+            color: var(--checkbox-disable-color);
         }
     }
 
     &__state {
         position: relative;
-        border: 1px solid #DDE2E5;
+        border: var(--checkbox-border);
         box-sizing: border-box;
         border-radius: 4px;
         width: 28px;

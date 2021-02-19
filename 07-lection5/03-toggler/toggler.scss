@@ -18,11 +18,11 @@
         &:checked {
             & ~ .toggler {
                 &__state {
-                    border: 1px solid blue;
+                    border: 1px solid var(--toggler-active-color);
 
                     & .toggler__flag {
                         transform: translate(0%, -50%);    
-                        background-color: blue;
+                        background-color: var(--toggler-active-color);
                     }
                 }
             }
@@ -32,16 +32,16 @@
             & ~ .toggler {
                 &__state {
                     cursor: not-allowed;
-                    background-color: #DDE2E5;
+                    background-color: var(--toggler-disable-color);
     
                     & .toggler__flag {
-                        background-color: #ACB5BD;
+                        background-color: var(--toggler-flag-color);
                     }
                 }
     
                 &__legend {
                     cursor: not-allowed;
-                    color: #DDE2E5;
+                    color: var(--toggler-disable-color);
                 }
             }
         }
@@ -50,7 +50,7 @@
     &__state {
         height: 28px;
         width: 52px;
-        border: 1px solid #DDE2E5;
+        border: 1px solid var(--toggler-disable-color);
         border-radius: 14px;
         position: relative;
     }
@@ -63,7 +63,7 @@
         height: 24px;
         width: 24px;
         border-radius: 50%;
-        background-color: #DDE2E5;
+        background-color: var(--toggler-disable-color);
     }
 
     &__legend {

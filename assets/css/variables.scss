@@ -59,4 +59,29 @@
     --calendar-day-active-fl-bg: #4263EB;
     --calendar-day-active-fl-color: #fff;
     --calendar-week-font-size: 8px;
+
+    //CHECKBOX
+    --checkbox-active-color: #4263EB;
+    --checkbox-disable-color:#DDE2E5;
+    --checkbox-border: 1px solid #DDE2E5;
+
+    //RADIOBUTTON
+    --radiobutton-active-color: #4263EB;
+    --radiobutton-disable-color:#DDE2E5;
+
+    //TOGGLER
+    --toggler-active-color: #4263EB;
+    --toggler-disable-color:#DDE2E5;
+    --toggler-flag-color:#ACB5BD;
+
+    //INPUT
+    --input-height: 48px;
+    --input-font-size: 16px;
+    --input-border: 1px solid #DDE2E5;
+    --input-padding-left: 20px;
+    --input-border-radius: 6px;
+    --input-placeholder-color: #495057;
+    --input-disabled: #ACB5BD;
+    --input-border-invalid: 1px solid #F03D3E;
+    --input-border-valid:  1px solid #4263EB;
 }

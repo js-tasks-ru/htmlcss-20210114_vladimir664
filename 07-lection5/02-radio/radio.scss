@@ -12,7 +12,7 @@
         position: absolute;
 
         &:checked ~ .radiobutton__state {
-            border: 2px solid blue;
+            border: 2px solid var(--radiobutton-active-color);
         }
         
         &:checked ~ .radiobutton__state .radiobutton__dot {
@@ -21,11 +21,11 @@
         
         &[disabled] ~ .radiobutton__state {
             cursor: not-allowed;
-            background-color: grey;
+            background-color: var(--radiobutton-disable-color);
         }
         &[disabled] ~ .radiobutton__text {
             cursor: not-allowed;
-            color: grey;
+            color: var(--radiobutton-disable-color);;
         }
 
         &:focus ~ .radiobutton__text {
@@ -37,7 +37,7 @@
         position: relative;
         height: 28px;
         width: 28px;
-        border: 2px solid grey;
+        border: 2px solid var(--radiobutton-disable-color);;
         box-sizing: border-box;
         border-radius: 50%;
     }
@@ -56,7 +56,7 @@
         transform: translate(-50%, -50%);
         height: 18px;
         width: 18px;
-        background-color: blue;
+        background-color: var(--radiobutton-active-color);
         border-radius: 50%;
         box-sizing: border-box;
     }
