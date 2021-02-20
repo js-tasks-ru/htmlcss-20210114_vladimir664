@@ -1,9 +1,33 @@
-<div id="burger-menu" class="menu">
-    <div id="burger-menu-close" class="menu_close-button">
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="16" cy="16" r="16" fill="#DDE2E5"/>
-            <path d="M22 10L10 22" stroke="#212429" stroke-width="2" stroke-linecap="roundstroke-linejoin="round"/>
-            <path d="M10 10L22 22" stroke="#212429" stroke-width="2" stroke-linecap="roundstroke-linejoin="round"/>
-        </svg>
+<div id="burger-menu" class="menu" data-open>
+    <div class="menu__header">
+        <div id="burger-menu-close" class="menu__close-button">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="16" cy="16" r="16" fill="#DDE2E5"/>
+                <path d="M22 10L10 22" stroke="#212429" stroke-width="2" stroke-linecap="roundstroke-linejoin="round"/>
+                <path d="M10 10L22 22" stroke="#212429" stroke-width="2" stroke-linecap="roundstroke-linejoin="round"/>
+            </svg>
+        </div>
+        <div class="menu__header-logo header__logo">
+            <svg width="110" height="32" viewBox="0 0 110 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect y="1" width="30" height="30" fill="#212429"/>
+                <rect x="38" width="32" height="32" rx="16" fill="#212429"/>
+                <path d="M78 0L110 32H78V0Z" fill="#212429"/>
+            </svg>
+        </div>
     </div>
+    <div class="menu__content">
+        <div class="menu__mode-block">
+            <div class="menu__mode-text">Dark mode</div>
+            <div class="menu__mode-toggler">    
+                <label class="toggler" >
+                    <input type="checkbox" class="toggler__control">
+                    <div class="toggler__state">
+                        <div class="toggler__flag">
+                        </div>
+                    </div>
+                </label> 
+            </div>
+        </div>
+    </div>
+
 </div>

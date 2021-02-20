@@ -13,7 +13,7 @@
     background-color: #F9FAFC;
     border-right: 4px solid darken(#F9FAFC, 80%);
 
-    &[data-open] .menu_close-button {
+    &[data-open] .menu__close-button {
         position: absolute;
         top: 16px;
         left: 12px;
@@ -27,8 +27,28 @@
         transition: transform 0.3s ease-in-out;
     }
 
-    &:not([data-open]) .menu_close-button {
+    &:not([data-open]) .menu__close-button {
         display: none;
     }
+
+    &__content {
+        padding: 16px;
+        background-color: #fff;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    &__mode-block {
+        display: flex;
+        justify-content: space-between;
+        padding: 29px 0 24px 0;
+        border-top: 1px solid #DDE2E5;
+        border-bottom: 1px solid #DDE2E5;
+
+        .toggler {
+            margin: 0;
+        }
+    }
+    
 }
 
