@@ -11,6 +11,7 @@
     width: 100%;
     height: 100%;
     background-color: #F9FAFC;
+    border-right: 4px solid darken(#F9FAFC, 80%);
 
     &[data-open] .menu_close-button {
         position: absolute;
