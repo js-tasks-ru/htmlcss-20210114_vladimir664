@@ -7,11 +7,11 @@
 }
 
 .container-block {
-	display: flex;
-	flex-wrap: wrap;
+	display: grid;
+    grid-template-columns: repeat(2, 172px);
 	justify-content: center;
-    padding-top: 8px;
-	padding-bottom: 8px;
+	align-items: center;
+	column-gap: 8px;
 
 	&__item {
 		width: 164px;

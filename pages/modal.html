@@ -7,7 +7,7 @@
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
 
     <link rel="stylesheet" href="../assets/css/build/main.css">
-    <link rel="stylesheet" href="template.css">
+    
 </head>
 <body>
     <div class="header">
@@ -26,9 +26,13 @@
     </div>
     <div class="component">
         <div class="component__header">
-            Custom form elements
+            Modal
         </div>
-        <div class="component__preview"></div>
+        <div class="component__preview">
+            <button id="modal-open" class="button button_primary modal__open-button">
+                <span class="button__text">Push the tempo</span>
+            </button> 
+        </div>
 
         <div class="component__code-container">
             <div class="component__code-tabs">
@@ -48,6 +52,15 @@
             </div>
         </div>
     </div>
-    <div class="footer">Reusable component library</div>
+    <div class="template-footer">Reusable component library</div>
+    <div id="modal" class="modal">
+        <div class="modal__container">
+            <div id="modal-close" class="modal__close-button">
+                <div class="modal__close-mark"></div>
+            </div>
+            <div class="modal__header">Modal header</div>
+            <div class="modal__content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente, quodtotamnumquam doloremque iusto, voluptates obcaecati, velit animi vitae blanditiis tempora. Doloremque,fugit.Fuga ipsa excepturi odio similique possimus voluptates.</div>
+        </div>
+    </div>
 </body>
 </html>

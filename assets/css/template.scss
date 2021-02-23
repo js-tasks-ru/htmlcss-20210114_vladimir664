@@ -1,0 +1,51 @@
+.component {
+    padding-top: 16px;
+
+    &__header {
+        font-size: 20px;
+        line-height: 26px;
+        color: #495057;
+        padding: 16px;
+    }
+
+    &__preview {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    &__code-tabs {
+        padding: 16px;
+        padding-bottom: 0;
+        display: flex;
+        border-bottom: 1px solid grey;
+    }
+
+    &__code-tabs div {
+        margin-right: 24px;
+        font-size: 16px;
+        line-height: 24px;
+        color: #ACB5BD;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+
+    &__code-tabs div[active] {
+        color: #212429;
+        border-bottom: 5px solid #212429;
+    }
+
+}
+
+pre.prettyprint {
+    border: none;
+}
+
+.template-footer {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #ACB5BD;
+    text-align: center;
+    padding: 56px 0 56px 0;
+}

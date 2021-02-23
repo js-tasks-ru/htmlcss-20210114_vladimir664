@@ -7,7 +7,7 @@
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
 
     <link rel="stylesheet" href="../assets/css/build/main.css">
-    <link rel="stylesheet" href="template.css">
+    
 </head>
 <body>
     <div class="header">
@@ -26,10 +26,34 @@
     </div>
     <div class="component">
         <div class="component__header">
-            Custom form elements
+            Checkbox
         </div>
-        <div class="component__preview"></div>
-
+        <div class="component__preview">
+            <div class="checkbox-block">
+                <label class="checkbox" >
+                    <input type="checkbox" class="checkbox__control">
+                    <div class="checkbox__state">
+                        <div class="checkbox__icon">
+                            <svg viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.5 7.5L5 11L13 2" stroke="white" stroke-width="3" stroke-linecap="roundstroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="checkbox__legend">Default</div>
+                </label>
+                <label class="checkbox" >
+                    <input type="checkbox" class="checkbox__control" disabled>
+                    <div class="checkbox__state">
+                        <div class="checkbox__icon">
+                            <svg viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.5 7.5L5 11L13 2" stroke="white" stroke-width="3" stroke-linecap="roundstroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="checkbox__legend">Disabled</div>
+                </label>
+            </div>
+        </div>
         <div class="component__code-container">
             <div class="component__code-tabs">
                 <div active>Html</div>
@@ -48,6 +72,6 @@
             </div>
         </div>
     </div>
-    <div class="footer">Reusable component library</div>
+    <div class="template-footer">Reusable component library</div>
 </body>
 </html>

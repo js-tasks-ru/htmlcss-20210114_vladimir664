@@ -8,7 +8,7 @@
     "fix": "stylelint --fix **/*.scss"
   },
   "keywords": [],
-  "author": "Sergey Zelenov",
+  "author": "Burkov Volodya",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^10.2.4",
