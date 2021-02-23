@@ -43,12 +43,28 @@
         justify-content: space-between;
         padding: 29px 0 24px 0;
         border-top: 1px solid #DDE2E5;
-        border-bottom: 1px solid #DDE2E5;
-
+/*         border-bottom: 1px solid #DDE2E5;
+ */
         .toggler {
             margin: 0;
         }
     }
-    
+
+    &__filter-block {
+        border-top: 1px solid #DDE2E5;
+    }
+
+    &__filter-header {
+        font-size: 20px;
+        line-height: 24px;
+        color: #ACB5BD;
+        padding-top: 24px;
+        padding-bottom: 16px;
+    }
+
+    &__filter-item {
+        padding-bottom: 16px;
+        color: #212429;
+    }
 }
 

@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="./assets/css/build/main.css">
     </head>
     <body>
-        <header class="header">
+        <header id="header" class="header" data-open>
             <div class="header__logo">
                 <svg width="110" height="32" viewBox="0 0 110 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect y="1" width="30" height="30" fill="#212429"/>
@@ -15,11 +15,11 @@
                 </svg>
             </div>
             <h1 class="header__text">Reusable component library</h1>
-            <div class="header__menu">
-                <div class="header__menu-item" active>All components</div>
-                <div class="header__menu-item">Elements</div>
-                <div class="header__menu-item">Containers</div>
-                <div class="header__menu-item">Templates</div>
+            <div id="header-menu" class="header__menu">
+                <div id="header-all" class="header__menu-item" active>All components</div>
+                <div id="header-element" class="header__menu-item">Elements</div>
+                <div id="header-container" class="header__menu-item">Containers</div>
+                <div id="header-template" class="header__menu-item">Templates</div>
             </div>
             <div id="burger-menu-open" class="header__burger-button">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -29,10 +29,10 @@
                 </svg>
             </div>
         </header>
-        <main>
+        <main id="main" class="main" data-open>
             <div class="main-content">
                 <div class="container-block">
-                    <div class="container-block__item">
+                    <div class="container-block__item .template">
                         <div class="container-block__item-component">
                             <!-- include component -->
                             
@@ -82,7 +82,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="container-block__item">
+                    <div class="container-block__item .element">
                         <div class="container-block__item-component">
                             <!-- include component -->
                             
@@ -110,7 +110,7 @@
                             </div> 
                         </div>
                     </div>
-                    <div class="container-block__item">
+                    <div class="container-block__item .container">
                         <div class="container-block__item-component">
                             <!-- include component -->
                             
@@ -133,7 +133,7 @@
                             </div> 
                         </div>
                     </div>
-                    <div class="container-block__item">
+                    <div class="container-block__item .container">
                         <div class="container-block__item-component">
                             <button id="modal-open" class="button button_primary modal__open-button">
                                 <span class="button__text">Push the tempo</span>
@@ -148,7 +148,7 @@
                             </div> 
                         </div>
                     </div>
-                    <div class="container-block__item">
+                    <div class="container-block__item .template">
                         <div class="container-block__item-component">
                             <!-- include component -->
                             
@@ -207,7 +207,7 @@
                             </div> 
                         </div>
                     </div>
-                    <div class="container-block__item">
+                    <div class="container-block__item .container">
                         <div class="container-block__item-component">
                             <div class="avatar">
                                 <img class="avatar__img" src="./06-lection4/01-avatar/public/avatar-200.jpg">
@@ -222,7 +222,7 @@
                             </div> 
                         </div>
                     </div>
-                    <div class="container-block__item">
+                    <div class="container-block__item .element">
                         <div class="container-block__item-component">
                             <!-- include component -->
                             <div class="checkbox-block">
@@ -260,7 +260,7 @@
                             </div> 
                         </div>
                     </div>
-                    <div class="container-block__item">
+                    <div class="container-block__item .element">
                         <div class="container-block__item-component">
                             <!-- include component -->
                             <div class="radiobutton-block">
@@ -290,7 +290,7 @@
                             </div> 
                         </div>
                     </div>
-                    <div class="container-block__item">
+                    <div class="container-block__item .element">
                         <div class="container-block__item-component">
                             <!-- include component -->
                             <div class="toggler-block">
@@ -322,7 +322,7 @@
                             </div> 
                         </div>
                     </div>
-                    <div class="container-block__item">
+                    <div class="container-block__item .element">
                         <div class="container-block__item-component">
                             <!-- include component -->
                             <label class="input">
@@ -349,7 +349,7 @@
                 </div>
             </div>
         </main>
-        <footer>
+        <footer id="footer" class="footer" data-open>
             <div class="about-block">
                 <div class="about-block__title">
                     Footer
@@ -399,6 +399,25 @@
                             </div>
                         </label> 
                     </div>
+                </div>
+                <div class="menu__filter-block">
+                    <div class="menu__filter-header">Elements</div>
+                    <div class="menu__filter-item">Skeleton</div>
+                    <div class="menu__filter-item">Checkbox</div>
+                    <div class="menu__filter-item">Radiobutton</div>
+                    <div class="menu__filter-item">Toggler</div> 
+                    <div class="menu__filter-item">Input</div>
+                </div>
+                <div class="menu__filter-block">
+                    <div class="menu__filter-header">Containers</div>
+                    <div class="menu__filter-item">Tooltip</div>
+                    <div class="menu__filter-item">Modal</div>
+                    <div class="menu__filter-item">Avatar</div>
+                </div>
+                <div class="menu__filter-block">
+                    <div class="menu__filter-header">Templates</div>
+                    <div class="menu__filter-item">Histogram</div>
+                    <div class="menu__filter-item">Calendar</div>
                 </div>
             </div>
         

@@ -48,4 +48,8 @@
     	top: 20px;
 		left: 16px;
 	}
+
+	&[data-open] {
+		display: none;
+	}
 }
