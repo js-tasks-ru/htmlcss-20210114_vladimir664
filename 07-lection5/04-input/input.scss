@@ -5,11 +5,6 @@
     flex-direction: column;
 
     &__field {
-        // height: 56px;
-        // font-size: 20px;
-        // padding-left: 24px;
-        // border-radius: 16px;
-
         height: var(--input-height);
         font-size: var(--input-font-size);
         padding-left: var(--input-padding);
@@ -87,8 +82,3 @@
         top: 26px;
     }
 }
-
-
-
-
-
