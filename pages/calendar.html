@@ -2,29 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Component</title>
+    <title>Calendar</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
-
-    <link rel="stylesheet" href="../assets/css/build/main.css">
-    
+    <base href="../">
+    <link rel="stylesheet" href="assets/css/build/main.css">
 </head>
 <body>
-    <div class="header">
+    <div id="header" class="header" data-open>
         <div class="header__logo">
-            <svg width="110" height="32" viewBox="0 0 110 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect y="1" width="30" height="30" fill="#212429"/>
-                <rect x="38" width="32" height="32" rx="16" fill="#212429"/>
-                <path d="M78 0L110 32H78V0Z" fill="#212429"/>
-            </svg>
+            <a href="index.html">
+                <svg width="110" height="32" viewBox="0 0 110 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect y="1" width="30" height="30" fill="#212429"/>
+                    <rect x="38" width="32" height="32" rx="16" fill="#212429"/>
+                    <path d="M78 0L110 32H78V0Z" fill="#212429"/>
+                </svg>
+            </a>
         </div>
-        <div class="header__burger-button">
+        <div id="burger-menu-open" class="header__burger-button">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3 12H21" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 6H21" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 18H21" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3 12H21" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3 6H21" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3 18H21" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
         </div>
     </div>
-    <div class="component">
+    <div id="main" class="main component" data-open>
         <div class="component__header">
             Calendar
         </div>
@@ -78,23 +81,193 @@
 
         <div class="component__code-container">
             <div class="component__code-tabs">
-                <div active>Html</div>
-                <div>Css</div>
-            </div>
-            <br>
-            <div class="component__code-example">
-                <pre class="prettyprint">
+                <div class="component__code-tab component__code-tab_html" active>Html</div>
+                <div class="component__code-tab component__code-tab_css">Scss</div>
+                <br>
+                <!-- html -->
+                <div class="component__code-example-html">
+                    <pre class="prettyprint">
 <xmp>
-    <div class="component__code-tabs">
-        <div class="component__code-tab" active>Html</div>
-        <div class="component__code-tab">Css</div>
+<div class="calendar">
+    <div class="calendar__header">
+        February 2021
     </div>
+    <div class="calendar__week">
+        <div class="calendar__week-day">Mon</div>
+        <div class="calendar__week-day">Tue</div>
+        <div class="calendar__week-day">Wed</div>
+        <div class="calendar__week-day">Thu</div>
+        <div class="calendar__week-day">Fri</div>
+        <div class="calendar__week-day">Sat</div>
+        <div class="calendar__week-day">Sun</div>
+    </div>
+    <div class="calendar__month">
+        <div class="calendar__day">1</div>
+        <div class="calendar__day">2</div>
+        <div class="calendar__day">3</div>
+        <div class="calendar__day">4</div>
+        <div class="calendar__day">5</div>
+        <div class="calendar__day">6</div>
+        <div class="calendar__day">7</div>
+        <div class="calendar__day">8</div>
+        <div class="calendar__day">9</div>
+        <div class="calendar__day calendar__day_active-first">10</div>
+        <div class="calendar__day calendar__day_active">11</div>
+        <div class="calendar__day calendar__day_active">12</div>
+        <div class="calendar__day calendar__day_active">13</div>
+        <div class="calendar__day calendar__day_active">14</div>
+        <div class="calendar__day calendar__day_active">15</div>
+        <div class="calendar__day calendar__day_active">16</div>
+        <div class="calendar__day calendar__day_active">17</div>
+        <div class="calendar__day calendar__day_active-last">18</div>
+        <div class="calendar__day">19</div>
+        <div class="calendar__day">20</div>
+        <div class="calendar__day">21</div>
+        <div class="calendar__day">22</div>
+        <div class="calendar__day">23</div>
+        <div class="calendar__day">24</div>
+        <div class="calendar__day">25</div>
+        <div class="calendar__day">26</div>
+        <div class="calendar__day">27</div>
+        <div class="calendar__day">28</div>
+    </div>
+</div>
 </xmp>
-                </pre>
+                    </pre>
+                </div>
+                <!-- css -->
+                <div class="component__code-example-css">
+                    <pre class="prettyprint lang-css">
+<xmp>
+.calendar {
+    height: 148px;
+    width: 148px;
+    border-radius: 8px;
+    display: grid;
+    grid-template-rows: 20% 10% 1fr;
+    box-sizing: border-box;
+
+    @media (min-width: 768px) {
+        height: 324px;
+        width: 304px;
+        border: 1px solid darkgray;
+        padding: 28px 26px;
+    }
+
+    &__header {
+        text-align: center;
+        font-weight: var(--calendar-header-font-weight);
+        margin: auto;
+        font-size: var(--calendar-header-font-size);
+        line-height: var(--calendar-header-line-height);
+    }
+    
+    &__day {
+        font-size: var(--calendar-day-font-size);
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (min-width: 768px) {
+            font-size: 16px;
+        }
+    }
+    
+    &__day_active {
+        background-color: var(--calendar-day-active-bg);
+    }
+    
+    &__day_active-last ,
+    &__day_active-first{
+        background-color: var(--calendar-day-active-fl-bg);
+        color: var(--calendar-day-active-fl-color);
+    }
+    
+    &__week {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        align-items: center;
+        justify-items: center;
+        grid-column-gap: 4px;
+        font-size: var(--calendar-week-font-size);
+
+        @media (min-width: 768px) {
+            grid-column-gap: 10px;
+            font-size: 12px;
+        }
+    }
+    
+    &__month {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        align-items: center;
+        justify-items: center;
+    }
+}
+</xmp>
+                    </pre>
+                </div>
             </div>
         </div>
     </div>
-    <div class="template-footer">Reusable component library</div>
+    <div id="footer" class="footer template-footer" data-open>Reusable component library</div>
+    <!-- include component -->
+    <div id="burger-menu" class="menu" data-open>
+        <div class="menu__header">
+            <div id="burger-menu-close" class="menu__close-button">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="16" cy="16" r="16" fill="#DDE2E5"/>
+                    <path d="M22 10L10 22" stroke="#212429" stroke-width="2" stroke-linecap="roundstroke-linejoin="round"/>
+                    <path d="M10 10L22 22" stroke="#212429" stroke-width="2" stroke-linecap="roundstroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="menu__header-logo header__logo">
+                <svg width="110" height="32" viewBox="0 0 110 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect y="1" width="30" height="30" fill="#212429"/>
+                    <rect x="38" width="32" height="32" rx="16" fill="#212429"/>
+                    <path d="M78 0L110 32H78V0Z" fill="#212429"/>
+                </svg>
+            </div>
+        </div>
+        <div class="menu__content">
+            <div class="menu__mode-block">
+                <div class="menu__mode-text">Dark mode</div>
+                <div class="menu__mode-toggler">    
+                    <label class="toggler" >
+                        <input type="checkbox" class="toggler__control">
+                        <div class="toggler__state">
+                            <div class="toggler__flag">
+                            </div>
+                        </div>
+                    </label> 
+                </div>
+            </div>
+            <div class="menu__filter-block">
+                <div class="menu__filter-header">Elements</div>
+                <a class="menu__filter-item" href="./pages/skeleton.html">Skeleton</a>
+                <a class="menu__filter-item" href="./pages/checkbox.html">Checkbox</a>
+                <a class="menu__filter-item" href="./pages/radiobutton.html">Radiobutton</a>
+                <a class="menu__filter-item" href="./pages/toggler.html">Toggler</a> 
+                <a class="menu__filter-item" href="./pages/input.html">Input</a>
+            </div>
+            <div class="menu__filter-block">
+                <div class="menu__filter-header">Containers</div>
+                <a class="menu__filter-item" href="./pages/tooltip.html">Tooltip</a>
+                <a class="menu__filter-item" href="./pages/modal.html">Modal</a>
+                <a class="menu__filter-item" href="./pages/avatar.html">Avatar</a>
+            </div>
+            <div class="menu__filter-block">
+                <div class="menu__filter-header">Templates</div>
+                <a class="menu__filter-item" href="./pages/histogarm.html">Histogram</a>
+                <a class="menu__filter-item" href="./pages/calendar.html">Calendar</a>
+            </div>
+        </div>
+    
+    </div>
+    <!-- end include component -->
 </body>
-<script src="../assets/js/index.js"></script> 
+<script src="assets/js/index.js"></script> 
 </html>
