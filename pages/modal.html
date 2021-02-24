@@ -46,16 +46,19 @@
                 <div class="component__code-example-html">
                     <pre class="prettyprint">
 <xmp>
-<label class="input">
-    <span class="input__label">Label</span>
-    <input class="input__field" pattern="\d*" name="lastname" placeholder="placeholder">
-    <div class="input__state"></div>
-</label>
-<label class="input">
-    <span class="input__label">Disabled</span>
-    <input class="input__field" type="text" name="lastname" placeholder="placeholder" disabled>
-    <div class="input__state"></div>
-</label>   
+<button id="modal-open" class="button button_primary modal__open-button">
+    <span class="button__text">Push the tempo</span>
+</button>
+     
+<div id="modal" class="modal">
+    <div class="modal__container">
+        <div id="modal-close" class="modal__close-button">
+            <div class="modal__close-mark"></div>
+        </div>
+        <div class="modal__header">Modal header</div>
+        <div class="modal__content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente,quodtotamnumquam doloremque iusto, voluptates obcaecati, velit animi vitae blanditiis tempora. Doloremquefugit.Fuga ipsa excepturi odio similique possimus voluptates.</div>
+    </div>
+</div>  
 </xmp>
                     </pre>
                 </div>
