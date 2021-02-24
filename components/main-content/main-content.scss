@@ -4,14 +4,24 @@
 
 .main-content {
 	background-color: #F9FAFC;
+
+	@media (min-width: 768px) {
+		
+	}
 }
 
 .container-block {
 	display: grid;
-    grid-template-columns: repeat(2, 172px);
 	justify-content: center;
 	align-items: center;
 	column-gap: 8px;
+	grid-template-columns: repeat(2, 172px);
+
+	@media (min-width: 768px) {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 16px;
+		padding: 16px 0;
+	}
 
 	&__item {
 		width: 164px;
@@ -22,6 +32,18 @@
 		margin: 8px;
 		display: flex;
 		flex-direction: column;
+		
+		@media (min-width: 768px) {
+			width: 240px;
+			height: 251px;
+			margin: auto;
+		}
+
+		@media (min-width: 1024px) {
+			width: 320px;
+			height: 350px;
+			margin: auto;
+		}
 	}
 
 	&__item-component {

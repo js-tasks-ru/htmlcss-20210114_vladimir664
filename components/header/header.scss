@@ -1,19 +1,54 @@
 .header {
 	position: relative;
+	padding-left: 16px;
+	padding-top: 16px;
+
+	@media (min-width: 768px) {
+		padding-left: 165px;
+		padding-right: 165px;		
+	}
+
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 24px;
+	}
+
+	&__toggler {
+		display: flex;
+		align-items: center;
+
+		.toggler {
+			margin: 0;
+			padding-left: 14px;
+		}
+
+		@media (max-width: 767px) {
+			display: none;
+		}
+	}
 
 	&__logo {
 		width: 110px;
-		height: 60px;
 		margin: auto;
-		padding-top: 16px;
+
+		@media (min-width: 768px) {
+			margin: initial;
+		}
 	}
 
 	&__text {
-		padding: 0px 71px 32px 16px;
+		padding: 0px 71px 32px 0px;
 		font-weight: 400; 
 		font-size: 28px;
 		line-height: 38px;
 		color: #495057;
+
+		@media (min-width: 768px) {
+			font-weight: 500; 
+			font-size: 50px;
+			line-height: 64px;
+		}
 	}
 
 	&__menu {
@@ -21,7 +56,6 @@
 		line-height: 24px;
 		color: #ACB5BD;
 		overflow-x: auto;
-		padding-left: 16px;
 		display: flex;
 		flex-wrap: nowrap;
 
@@ -47,6 +81,10 @@
 		position: absolute;
     	top: 20px;
 		left: 16px;
+
+		@media (min-width: 768px) {
+			display: none;
+		}
 	}
 
 	&[data-open] {
