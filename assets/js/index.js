@@ -15,8 +15,6 @@
         });
     }
 
-
-
     /**burger-menu */
     const menu = document.getElementById('burger-menu');
     const menuClose = document.getElementById('burger-menu-close');
@@ -50,8 +48,9 @@
     /**header filters */
     const headerMenuItems = document.querySelectorAll('div.header__menu-item');
     const blockItems =  document.querySelectorAll('div.container-block__item');
-    
-    if(!headerMenuItems.length && !blockItems.length) {
+
+
+    if(headerMenuItems.length && blockItems.length) {
         headerMenuItems.forEach(item => {
             item.addEventListener('click', () => {
                 item.setAttribute('active', '');

@@ -2,29 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Component</title>
+    <title>Tooltip</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
-
-    <link rel="stylesheet" href="../assets/css/build/main.css">
-    
+    <base href="../">
+    <link rel="stylesheet" href="assets/css/build/main.css">
 </head>
 <body>
-    <div class="header">
+    <div id="header" class="header">
         <div class="header__logo">
-            <svg width="110" height="32" viewBox="0 0 110 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect y="1" width="30" height="30" fill="#212429"/>
-                <rect x="38" width="32" height="32" rx="16" fill="#212429"/>
-                <path d="M78 0L110 32H78V0Z" fill="#212429"/>
-            </svg>
+            <a href="index.html">
+                <svg width="110" height="32" viewBox="0 0 110 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect y="1" width="30" height="30" fill="#212429"/>
+                    <rect x="38" width="32" height="32" rx="16" fill="#212429"/>
+                    <path d="M78 0L110 32H78V0Z" fill="#212429"/>
+                </svg>
+            </a>
         </div>
-        <div class="header__burger-button">
+        <div id="burger-menu-open" class="header__burger-button">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3 12H21" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 6H21" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 18H21" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3 12H21" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3 6H21" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3 18H21" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
         </div>
     </div>
-    <div class="component">
+    <div id="main" class="main component">
         <div class="component__header">
             Tooltip
         </div>
@@ -39,19 +42,24 @@
                 </div>
             </div>
         </div>
+
         <div class="component__code-container">
             <div class="component__code-tabs">
                 <div class="component__code-tab component__code-tab_html" active>Html</div>
-                <div class="component__code-tab component__code-tab_css">Css</div>
+                <div class="component__code-tab component__code-tab_css">Scss</div>
                 <br>
                 <!-- html -->
                 <div class="component__code-example-html">
                     <pre class="prettyprint">
 <xmp>
-<div class="component__code-tabs">
-    <div class="component__code-tab" active>Html</div>
-    <div class="component__code-tab">Css</div>
-</div>
+<div class="tooltip">
+    <div class="tooltip__circle-around">
+        <div class="tooltip__question-mark"></div>
+    </div>
+    <div class="tooltip__modal-block">
+        <div class="tooltip__modal-block-text">Helper text</div>
+    </div>
+</div>         
 </xmp>
                     </pre>
                 </div>
@@ -59,17 +67,147 @@
                 <div class="component__code-example-css">
                     <pre class="prettyprint">
 <xmp>
-<div class="component__code-tabs">
-    <div class="component__code-tab" active>Html</div>
-    <div class="component__code-tab">Css</div>
-</div>
+.tooltip {
+    cursor: pointer;
+    transform: var(--tooltip-scale);
+
+    &__circle-around {
+        height: 100px;
+        width: 100px;
+        border: 10px solid black;
+        border-radius: 50%;
+        box-sizing: border-box;
+    }
+
+    &__question-mark {
+        box-sizing: border-box;
+        height: 50%;
+        width: 50%;
+        border: 10px solid black;
+        border-bottom: 10px solid transparent;
+        border-bottom-right-radius: 0%;
+        border-bottom-left-radius: 50%;
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+        transform: rotate(45deg) translate(50%, -25%);
+    }
+
+    &__question-mark::before {
+        content: '';
+        width: 10px;
+        height: 10px;
+        border-radius: 5px;
+        transform-origin: right;
+        position: absolute;
+        background: black;
+        top: 27px;
+        left: 30px;
+        transform: rotate(-45deg);
+    }
+
+    &__modal-block {
+        position: absolute;
+        box-sizing: border-box;
+        border-radius: 20px;
+    }
+    
+    &:hover .tooltip__modal-block {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--tooltip-modal-block-color);
+        width: 430px;
+        height: 150px;
+        transform: translate(-38%,-188%);    
+    }
+
+    &:hover .tooltip__modal-block::after {
+        content: '';
+        width: 50px;
+        height: 50px;
+        display: block;
+        border-top: 50px solid var(--tooltip-modal-block-color);
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        left: 50%;
+        transform: translate(-50%);
+        bottom: -18%;       
+        box-sizing: border-box;
+        position: absolute;
+    }
+
+    &__modal-block-text {
+        display: none;
+    }
+
+    &:hover .tooltip__modal-block-text {
+        display: block;
+        font-size: 4rem;
+        text-align: center;
+        color: var(--tooltip-modal-block-text);
+    }
+}    
 </xmp>
                     </pre>
                 </div>
             </div>
         </div>
     </div>
-    <div class="template-footer">Reusable component library</div>
+    <div id="footer" class="footer template-footer">Reusable component library</div>
+    <!-- include component -->
+    <div id="burger-menu" class="menu">
+        <div class="menu__header">
+            <div id="burger-menu-close" class="menu__close-button">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="16" cy="16" r="16" fill="#DDE2E5"/>
+                    <path d="M22 10L10 22" stroke="#212429" stroke-width="2" stroke-linecap="roundstroke-linejoin="round"/>
+                    <path d="M10 10L22 22" stroke="#212429" stroke-width="2" stroke-linecap="roundstroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="menu__header-logo header__logo">
+                <svg width="110" height="32" viewBox="0 0 110 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect y="1" width="30" height="30" fill="#212429"/>
+                    <rect x="38" width="32" height="32" rx="16" fill="#212429"/>
+                    <path d="M78 0L110 32H78V0Z" fill="#212429"/>
+                </svg>
+            </div>
+        </div>
+        <div class="menu__content">
+            <div class="menu__mode-block">
+                <div class="menu__mode-text">Dark mode</div>
+                <div class="menu__mode-toggler">    
+                    <label class="toggler" >
+                        <input type="checkbox" class="toggler__control">
+                        <div class="toggler__state">
+                            <div class="toggler__flag">
+                            </div>
+                        </div>
+                    </label> 
+                </div>
+            </div>
+            <div class="menu__filter-block">
+                <div class="menu__filter-header">Elements</div>
+                <a class="menu__filter-item" href="./pages/skeleton.html">Skeleton</a>
+                <a class="menu__filter-item" href="./pages/checkbox.html">Checkbox</a>
+                <a class="menu__filter-item" href="./pages/radiobutton.html">Radiobutton</a>
+                <a class="menu__filter-item" href="./pages/toggler.html">Toggler</a> 
+                <a class="menu__filter-item" href="./pages/input.html">Input</a>
+            </div>
+            <div class="menu__filter-block">
+                <div class="menu__filter-header">Containers</div>
+                <a class="menu__filter-item" href="./pages/tooltip.html">Tooltip</a>
+                <a class="menu__filter-item" href="./pages/modal.html">Modal</a>
+                <a class="menu__filter-item" href="./pages/avatar.html">Avatar</a>
+            </div>
+            <div class="menu__filter-block">
+                <div class="menu__filter-header">Templates</div>
+                <a class="menu__filter-item" href="./pages/histogram.html">Histogram</a>
+                <a class="menu__filter-item" href="./pages/calendar.html">Calendar</a>
+            </div>
+        </div>
+    
+    </div>
+    <!-- end include component -->
 </body>
-<script src="../assets/js/index.js"></script> 
+<script src="assets/js/index.js"></script> 
 </html>
