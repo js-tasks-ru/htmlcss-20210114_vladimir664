@@ -52,4 +52,9 @@ gulp.task('build-html', function() {
     .pipe(rigger()) // Sends it through a gulp plugin
     .pipe(rename('tooltip.html'))
     .pipe(gulp.dest('./pages'));
+
+    gulp.src('pages/templates/avatar-template.html') // Get source files with gulp.src
+    .pipe(rigger()) // Sends it through a gulp plugin
+    .pipe(rename('avatar.html'))
+    .pipe(gulp.dest('./pages'));
 });
