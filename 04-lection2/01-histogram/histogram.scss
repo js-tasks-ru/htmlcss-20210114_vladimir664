@@ -3,11 +3,18 @@
     flex-direction: column;
     justify-content: space-between;
     border: 1px solid var(--histogram-border-color);
+    box-sizing: border-box;
     width: 145px;
     height: 75px;
     border-radius: 3px;
     padding: 6px 9px 9px;
-    box-sizing: border-box;
+
+    @media (min-width: 768px) {
+        width: 300px;
+        height: 157px;
+        border-radius: 3px;
+        padding: 12px 20px 20px;
+    }
 
     &__header {
         display: flex;
@@ -15,6 +22,12 @@
         font-weight: 400;
         font-size: var(--histogram-font-size);
         line-height: var(--histogram-line-height);
+        
+        @media (min-width: 768px) {
+            font-size: 14px;
+            line-height: 22px;
+        }
+
     }
 
     &__name {
@@ -24,6 +37,11 @@
     &__number {
         font-size: var(--histogram-number-font-size);
         line-height: var(--histogram-number-line-height);
+
+        @media (min-width: 768px) {
+            font-size: 20px;
+            line-height: 24px;
+        }
     }
 
     &__button {
