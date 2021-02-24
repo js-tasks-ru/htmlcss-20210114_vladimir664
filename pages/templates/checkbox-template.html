@@ -2,29 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Component</title>
+    <title>Checkbox</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
-
-    <link rel="stylesheet" href="../assets/css/build/main.css">
+    <base href="../">
+    <link rel="stylesheet" href="assets/css/build/main.css">
     
 </head>
 <body>
-    <div class="header">
+    <div id="header" class="header" data-open>
         <div class="header__logo">
-            <svg width="110" height="32" viewBox="0 0 110 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect y="1" width="30" height="30" fill="#212429"/>
-                <rect x="38" width="32" height="32" rx="16" fill="#212429"/>
-                <path d="M78 0L110 32H78V0Z" fill="#212429"/>
-            </svg>
+            <a href="index.html">
+                <svg width="110" height="32" viewBox="0 0 110 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect y="1" width="30" height="30" fill="#212429"/>
+                    <rect x="38" width="32" height="32" rx="16" fill="#212429"/>
+                    <path d="M78 0L110 32H78V0Z" fill="#212429"/>
+                </svg>
+            </a>
         </div>
-        <div class="header__burger-button">
+        <div id="burger-menu-open" class="header__burger-button">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3 12H21" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 6H21" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 18H21" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3 12H21" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3 6H21" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3 18H21" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
         </div>
     </div>
-    <div class="component">
+    <div id="main" class="main component" data-open>
         <div class="component__header">
             Checkbox
         </div>
@@ -41,10 +45,30 @@
                 <div class="component__code-example-html">
                     <pre class="prettyprint">
 <xmp>
-<div class="component__code-tabs">
-    <div class="component__code-tab" active>Html</div>
-    <div class="component__code-tab">Css</div>
-</div>
+<div class="checkbox-block">
+    <label class="checkbox" >
+        <input type="checkbox" class="checkbox__control">
+        <div class="checkbox__state">
+            <div class="checkbox__icon">
+                <svg viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.5 7.5L5 11L13 2" stroke="white" stroke-width="3"stroke-linecap="roundstroke-linejoin="round"/>
+                </svg>
+            </div>
+        </div>
+        <div class="checkbox__legend">Default</div>
+    </label>
+    <label class="checkbox" >
+        <input type="checkbox" class="checkbox__control" disabled>
+        <div class="checkbox__state">
+            <div class="checkbox__icon">
+                <svg viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.5 7.5L5 11L13 2" stroke="white" stroke-width="3"stroke-linecap="roundstroke-linejoin="round"/>
+                </svg>
+            </div>
+        </div>
+        <div class="checkbox__legend">Disabled</div>
+    </label>
+</div>    
 </xmp>
                     </pre>
                 </div>
@@ -52,17 +76,82 @@
                 <div class="component__code-example-css">
                     <pre class="prettyprint">
 <xmp>
-<div class="component__code-tabs">
-    <div class="component__code-tab" active>Html</div>
-    <div class="component__code-tab">Css</div>
-</div>
+.checkbox {
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    margin: 30px;
+
+    &__control {
+        width: 1px;
+        height: 1px;
+        pointer-events: none;
+        opacity: 0;
+        position: absolute;
+
+        &:checked ~ .checkbox__state {
+            background-color: var(--checkbox-active-color);
+        }
+
+        &:checked ~ .checkbox__state .checkbox__icon{
+            display: block;
+        }
+
+        &:focus ~ .checkbox__legend{
+            text-decoration: underline;
+        }
+
+        &[disabled] ~ .checkbox__state {
+            cursor: not-allowed;
+            background-color: var(--checkbox-disable-color);
+        }
+
+        &[disabled] ~ .checkbox__legend {
+            padding: 0 0 0 12px;
+            margin: 0;
+            cursor: not-allowed;
+            color: var(--checkbox-disable-color);
+        }
+    }
+
+    &__state {
+        position: relative;
+        border: var(--checkbox-border);
+        box-sizing: border-box;
+        border-radius: 4px;
+        width: 28px;
+        height: 28px;
+        flex-shrink: 0;
+        flex-grow: 0;
+    }
+
+    &__legend {
+        margin: 0 0 0 12px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    
+    &__icon {
+        position: absolute;
+        display: none;
+        width: 15px;
+        height: 13px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
 </xmp>
                     </pre>
                 </div>
             </div>
         </div>
     </div>
-    <div class="template-footer">Reusable component library</div>
+    <div id="footer" class="footer template-footer" data-open>Reusable component library</div>
+    <!-- include component -->
+    //= ../../09-lection7/01-burger-menu/menu.html
+    <!-- end include component -->
 </body>
-<script src="../assets/js/index.js"></script> 
+<script src="assets/js/index.js"></script> 
 </html>
