@@ -67,12 +67,83 @@ pre.prettyprint {
     text-transform: lowercase;
 }
 
-.template-footer {
-    font-size: 12px;
-    line-height: 18px;
-    font-weight: 500;
-    text-transform: uppercase;
-    color: #ACB5BD;
-    text-align: center;
-    padding: 56px 0 56px 0;
+.template {
+
+    @media (min-width: 768px) {
+        padding-left: 30%;
+        background-color: #f9fafc;
+
+        &__header.header{
+            height: 68px;
+            padding-top: 0;
+            padding-right: 16px;
+            display: flex;
+            justify-content: flex-end;
+
+            .header__logo {
+                display: none;
+            }
+
+            .header__mode-toggler {
+                display: flex;
+            }
+        }
+
+        &__footer, 
+        &__main {
+            background-color: #fff;
+        }
+    }
+
+    &__header .header__mode-toggler{
+        display: none;
+
+        // &__mode-toggler {
+        //     display: none;
+        // }
+    }
+
+
+    &__footer {
+        font-size: 12px;
+        line-height: 18px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #ACB5BD;
+        text-align: center;
+        padding: 25px 0;
+    }    
+}
+
+.side-menu {
+
+    @media (min-width: 768px) {
+        background-color: #f9fafc;
+
+        .menu{
+            left: 0;
+            width: 30%;
+    
+            &__mode-block {
+                display: none;
+            }
+    
+            &__content {
+                text-align: center;
+                background-color: #f9fafc;
+            }
+    
+            &__filter-item {
+                text-decoration: none;
+            }
+    
+            &__header-logo {
+                margin: auto;
+            }
+    
+            &__filter-block {
+                border: none;
+            }
+        }
+    }
 }
