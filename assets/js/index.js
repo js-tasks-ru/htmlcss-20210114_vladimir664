@@ -91,4 +91,25 @@
             })
         });
     }
+
+    /** darktheme*/
+    const changers = document.querySelectorAll('input.theme-changer__control');
+    const html = document.documentElement;
+    let currentTheme = Boolean(sessionStorage.getItem('dark'));
+
+    if(!currentTheme){
+        html.toggleAttribute('data-theme-dark');
+    }
+
+    changers.forEach(changer => {
+        changer.addEventListener('change', function() {
+            menu.removeAttribute('data-open');
+            header.removeAttribute('data-open');
+            main.removeAttribute('data-open');
+            footer.removeAttribute('data-open');
+            html.toggleAttribute('data-theme-dark');
+            sessionStorage.setItem('dark', String(!currentTheme));
+        });
+    });
+
 })();
