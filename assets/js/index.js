@@ -95,9 +95,9 @@
     /** darktheme*/
     const changers = document.querySelectorAll('input.theme-changer__control');
     const html = document.documentElement;
-    let currentTheme = Boolean(sessionStorage.getItem('dark'));
+    let currentTheme = sessionStorage.getItem('dark');
 
-    if(!currentTheme){
+    if(sessionStorage.getItem('dark') == 'true'){
         html.toggleAttribute('data-theme-dark');
     }
 
@@ -108,7 +108,8 @@
             main.removeAttribute('data-open');
             footer.removeAttribute('data-open');
             html.toggleAttribute('data-theme-dark');
-            sessionStorage.setItem('dark', String(!currentTheme));
+            sessionStorage.setItem('dark', sessionStorage.getItem('dark') == 'false' || 
+                                           sessionStorage.getItem('dark') == 'null'  ? 'true' : 'false');
         });
     });
 
