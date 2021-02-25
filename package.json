@@ -4,7 +4,7 @@
   "description": "Course Materials",
   "scripts": {
     "test": "cross-env NODE_ENV=test mocha --no-warnings --reporter=reporter.js --ignore=node_modules/** **/*.test.js",
-    "build": "postcss ./assets/css/main.scss -o ./assets/css/build/main.css",
+    "build": "postcss ./assets/css/main.scss -o ./assets/css/build/main.css && gulp build-html",
     "fix": "stylelint --fix **/*.scss"
   },
   "keywords": [],
