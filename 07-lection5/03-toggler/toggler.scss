@@ -21,7 +21,7 @@
                     border: 1px solid var(--toggler-active-color);
 
                     & .toggler__flag {
-                        transform: translate(0%, -50%);    
+                        transform: translate(0%, -50%);
                         background-color: var(--toggler-active-color);
                     }
                 }
@@ -59,7 +59,8 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-100%, -50%);    
+        transform: translate(-100%, -50%);
+        transition: transform 0.3s ease-in-out;
         height: 24px;
         width: 24px;
         border-radius: 50%;
