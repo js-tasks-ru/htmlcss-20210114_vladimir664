@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkbox</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <base href="../">
+    <link rel="stylesheet" href="assets/css/build/main.css">
+    <script defer src="10-lection8/01-theme-changer/theme-changer.js"></script>
+</head>
+<body>
+    <div class="template">
+        <div id="header" class="header template__header">
+            <div class="header__logo">
+                //= ../../components/logo/logo.html
+            </div>
+            <div id="burger-menu-open" class="header__burger-button">
+                //= ../../components/burger-button/burger-button.html
+
+            </div>
+            <div class="header__mode-toggler menu__mode-toggler">
+                //= ../../components/mode-toggler/mode-toggler.html
+            </div> 
+        </div>
+        <div id="main" class="main template__main component">
+            <div class="component__header">
+                Checkbox
+            </div>
+            <div class="component__preview">
+                //= ../../07-lection5/01-checkbox/checkbox.html
+            </div>
+    
+            <div class="component__code-container">
+                <div class="component__code-tabs">
+                    <div class="component__code-tab component__code-tab_html" active>Html</div>
+                    <div class="component__code-tab component__code-tab_css">Scss</div>
+                    <br>
+                    <!-- html -->
+                    <div class="component__code-example-html">
+                        <pre class="prettyprint">
+    <xmp>
+    <div class="checkbox-block">
+        <label class="checkbox" >
+            <input type="checkbox" class="checkbox__control">
+            <div class="checkbox__state">
+                <div class="checkbox__icon">
+                    <svg viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.5 7.5L5 11L13 2" stroke="white" stroke-width="3"stroke-linecap="roundstroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="checkbox__legend">Default</div>
+        </label>
+        <label class="checkbox" >
+            <input type="checkbox" class="checkbox__control" disabled>
+            <div class="checkbox__state">
+                <div class="checkbox__icon">
+                    <svg viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.5 7.5L5 11L13 2" stroke="white" stroke-width="3"stroke-linecap="roundstroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="checkbox__legend">Disabled</div>
+        </label>
+    </div>    
+    </xmp>
+                        </pre>
+                    </div>
+                    <!-- css -->
+                    <div class="component__code-example-css">
+                        <pre class="prettyprint">
+    <xmp>
+    .checkbox {
+        display:flex;
+        justify-content: flex-start;
+        align-items: center;
+        cursor: pointer;
+        margin: 30px;
+    
+        &__control {
+            width: 1px;
+            height: 1px;
+            pointer-events: none;
+            opacity: 0;
+            position: absolute;
+    
+            &:checked ~ .checkbox__state {
+                background-color: var(--checkbox-active-color);
+            }
+    
+            &:checked ~ .checkbox__state .checkbox__icon{
+                display: block;
+            }
+    
+            &:focus ~ .checkbox__legend{
+                text-decoration: underline;
+            }
+    
+            &[disabled] ~ .checkbox__state {
+                cursor: not-allowed;
+                background-color: var(--checkbox-disable-color);
+            }
+    
+            &[disabled] ~ .checkbox__legend {
+                padding: 0 0 0 12px;
+                margin: 0;
+                cursor: not-allowed;
+                color: var(--checkbox-disable-color);
+            }
+        }
+    
+        &__state {
+            position: relative;
+            border: var(--checkbox-border);
+            box-sizing: border-box;
+            border-radius: 4px;
+            width: 28px;
+            height: 28px;
+            flex-shrink: 0;
+            flex-grow: 0;
+        }
+    
+        &__legend {
+            margin: 0 0 0 12px;
+            font-size: 16px;
+            line-height: 24px;
+        }
+        
+        &__icon {
+            position: absolute;
+            display: none;
+            width: 15px;
+            height: 13px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    </xmp>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer" class="footer template__footer">Reusable component library</div>
+    </div>
+    <div class="side-menu">
+        <!-- include component -->
+        //= ../../09-lection7/01-burger-menu/menu.html
+        <!-- end include component -->
+    </div>
+</body>
+<script src="assets/js/index.js"></script> 
+</html>

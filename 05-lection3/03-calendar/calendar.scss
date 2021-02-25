@@ -1,0 +1,73 @@
+.calendar {
+    height: 148px;
+    width: 148px;
+    border-radius: 8px;
+    display: grid;
+    grid-template-rows: 20% 10% 1fr;
+    box-sizing: border-box;
+
+    @media (min-width: 768px) {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    @media (min-width: 1024px) {
+        height: 240px;
+        width: 240px;
+        border: 1px solid darkgray;
+        padding: 28px 19px;
+    }
+
+    &__header {
+        text-align: center;
+        font-weight: var(--calendar-header-font-weight);
+        margin: auto;
+        font-size: var(--calendar-header-font-size);
+        line-height: var(--calendar-header-line-height);
+    }
+    
+    &__day {
+        font-size: var(--calendar-day-font-size);
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (min-width: 768px) {
+            font-size: 16px;
+        }
+    }
+    
+    &__day_active {
+        background-color: var(--calendar-day-active-bg);
+    }
+    
+    &__day_active-last ,
+    &__day_active-first{
+        background-color: var(--calendar-day-active-fl-bg);
+        color: var(--calendar-day-active-fl-color);
+    }
+    
+    &__week {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        align-items: center;
+        justify-items: center;
+        grid-column-gap: 4px;
+        font-size: var(--calendar-week-font-size);
+
+        @media (min-width: 768px) {
+            grid-column-gap: 10px;
+            font-size: 12px;
+        }
+    }
+    
+    &__month {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        align-items: center;
+        justify-items: center;
+    }
+}

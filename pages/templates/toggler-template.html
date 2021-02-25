@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Toggler</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <base href="../">
+    <link rel="stylesheet" href="assets/css/build/main.css">
+    <script defer src="10-lection8/01-theme-changer/theme-changer.js"></script>
+</head>
+<body>
+    <div class="template">
+        <div id="header" class="header template__header">
+            <div class="header__logo">
+                //= ../../components/logo/logo.html
+            </div>
+            <div id="burger-menu-open" class="header__burger-button">
+                //= ../../components/burger-button/burger-button.html
+
+            </div>
+            <div class="header__mode-toggler menu__mode-toggler">
+                //= ../../components/mode-toggler/mode-toggler.html
+            </div> 
+        </div>
+        <div id="main" class="main template__main component">
+            <div class="component__header">
+                Toggler
+            </div>
+            <div class="component__preview">
+                //= ../../07-lection5/03-toggler/toggler.html
+            </div>
+    
+            <div class="component__code-container">
+                <div class="component__code-tabs">
+                    <div class="component__code-tab component__code-tab_html" active>Html</div>
+                    <div class="component__code-tab component__code-tab_css">Scss</div>
+                    <br>
+                    <!-- html -->
+                    <div class="component__code-example-html">
+                        <pre class="prettyprint">
+    <xmp>
+    <div class="toggler-block">
+        <label class="toggler" >
+            <input type="checkbox" class="toggler__control">
+            <div class="toggler__state">
+                <div class="toggler__flag">
+                </div>
+            </div>
+            <div class="toggler__legend">Default</div>
+        </label>
+        <label class="toggler" >
+            <input type="checkbox" class="toggler__control" disabled>
+            <div class="toggler__state">
+                <div class="toggler__flag">
+                </div>
+            </div>
+            <div class="toggler__legend">Disabled</div>
+        </label>    
+    </div>          
+    </xmp>
+                        </pre>
+                    </div>
+                    <!-- css -->
+                    <div class="component__code-example-css">
+                        <pre class="prettyprint">
+    <xmp>
+    .toggler {
+        margin: 30px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    
+        &__control {
+            height: 1px;
+            width: 1px;
+            opacity: 0;
+            pointer-events: none;
+            position: absolute;
+    
+            &:focus ~ .toggler__legend{
+                text-decoration: underline;
+            }
+    
+            &:checked {
+                & ~ .toggler {
+                    &__state {
+                        border: 1px solid var(--toggler-active-color);
+    
+                        & .toggler__flag {
+                            transform: translate(0%, -50%);    
+                            background-color: var(--toggler-active-color);
+                        }
+                    }
+                }
+            }
+            
+            &[disabled] {
+                & ~ .toggler {
+                    &__state {
+                        cursor: not-allowed;
+                        background-color: var(--toggler-disable-color);
+        
+                        & .toggler__flag {
+                            background-color: var(--toggler-flag-color);
+                        }
+                    }
+        
+                    &__legend {
+                        cursor: not-allowed;
+                        color: var(--toggler-disable-color);
+                    }
+                }
+            }
+        }
+    
+        &__state {
+            height: 28px;
+            width: 52px;
+            border: 1px solid var(--toggler-disable-color);
+            border-radius: 14px;
+            position: relative;
+        }
+    
+        &__flag {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-100%, -50%);    
+            height: 24px;
+            width: 24px;
+            border-radius: 50%;
+            background-color: var(--toggler-disable-color);
+        }
+    
+        &__legend {
+            padding: 0 0 0 13px;
+        }
+    }    
+    </xmp>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer" class="footer template__footer">Reusable component library</div>
+    </div>
+    <div class="side-menu">
+        <!-- include component -->
+        //= ../../09-lection7/01-burger-menu/menu.html
+        <!-- end include component -->
+    </div>
+</body>
+<script src="assets/js/index.js"></script> 
+</html>
+

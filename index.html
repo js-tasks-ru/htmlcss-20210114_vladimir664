@@ -2,9 +2,477 @@
 <!-- Главная страница -->
 <html lang="ru">
     <head>
-        <link rel="stylesheet" href="./assets/css/main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./assets/css/build/main.css">
+        <script defer src="./10-lection8/01-theme-changer/theme-changer.js"></script>
+        <title>HTML/CSS project</title>
     </head>
     <body>
+        <header id="header" class="header">
+            <div class="header__top">
+                <div class="header__logo">
+                    <a href="index.html">
+                        <svg width="110" height="32" viewBox="0 0 110 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect y="1" width="30" height="30" fill="#212429"/>
+                            <rect x="38" width="32" height="32" rx="16" fill="#212429"/>
+                            <path d="M78 0L110 32H78V0Z" fill="#212429"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="header__toggler">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8ZM6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18C8.68629 18 6 15.3137 6 12Z" fill="#212429"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C12.5523 0 13 0.447715 13 1V3C13 3.55228 12.5523 4 12 4C11.4477 4 11 3.55228 11 3V1C11 0.447715 11.4477 0 12 0Z" fill="#212429"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 20C12.5523 20 13 20.4477 13 21V23C13 23.5523 12.5523 24 12 24C11.4477 24 11 23.5523 11 23V21C11 20.4477 11.4477 20 12 20Z" fill="#212429"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.51286 3.51286C3.90339 3.12234 4.53655 3.12234 4.92708 3.51286L6.34708 4.93286C6.7376 5.32339 6.7376 5.95655 6.34708 6.34708C5.95655 6.7376 5.32339 6.7376 4.93286 6.34708L3.51286 4.92708C3.12234 4.53655 3.12234 3.90339 3.51286 3.51286Z" fill="#212429"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M17.653 17.6529C18.0435 17.2624 18.6767 17.2624 19.0672 17.6529L20.4872 19.0729C20.8777 19.4634 20.8777 20.0966 20.4872 20.4871C20.0967 20.8776 19.4635 20.8776 19.073 20.4871L17.653 19.0671C17.2625 18.6766 17.2625 18.0434 17.653 17.6529Z" fill="#212429"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 12C0 11.4477 0.447715 11 1 11H3C3.55228 11 4 11.4477 4 12C4 12.5523 3.55228 13 3 13H1C0.447715 13 0 12.5523 0 12Z" fill="#212429"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M20 12C20 11.4477 20.4477 11 21 11H23C23.5523 11 24 11.4477 24 12C24 12.5523 23.5523 13 23 13H21C20.4477 13 20 12.5523 20 12Z" fill="#212429"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.34708 17.6529C6.7376 18.0434 6.7376 18.6766 6.34708 19.0671L4.92708 20.4871C4.53655 20.8776 3.90339 20.8776 3.51286 20.4871C3.12234 20.0966 3.12234 19.4634 3.51286 19.0729L4.93286 17.6529C5.32339 17.2624 5.95655 17.2624 6.34708 17.6529Z" fill="#212429"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M20.4872 3.51286C20.8777 3.90339 20.8777 4.53655 20.4872 4.92708L19.0672 6.34708C18.6767 6.7376 18.0435 6.7376 17.653 6.34708C17.2625 5.95655 17.2625 5.32339 17.653 4.93286L19.073 3.51286C19.4635 3.12234 20.0967 3.12234 20.4872 3.51286Z" fill="#212429"/>
+                    </svg>  
+                    <label class="toggler" >
+                        <input id="theme-changer" type="checkbox" class="toggler__control theme-changer__control">
+                        <div class="toggler__state">
+                            <div class="toggler__flag">
+                            </div>
+                        </div>
+                        <div class="toggler__legend">
+                        </div>
+                    </label>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0811 2.50904C12.2746 2.85242 12.2484 3.27745 12.0141 3.59442C11.1598 4.75008 10.7488 6.17395 10.8557 7.60706C10.9625 9.04018 11.5802 10.3873 12.5964 11.4035C13.6126 12.4197 14.9597 13.0374 16.3929 13.1443C17.826 13.2511 19.2498 12.8401 20.4055 11.9859L20.9999 12.79L21.9957 12.882C21.8209 14.7734 21.1111 16.5758 19.9493 18.0785C18.7875 19.5811 17.2218 20.7218 15.4353 21.3671C13.6489 22.0124 11.7156 22.1355 9.86177 21.7221C8.0079 21.3088 6.3101 20.376 4.96702 19.0329C3.62394 17.6898 2.69115 15.992 2.27778 14.1381C1.86441 12.2843 1.98757 10.351 2.63284 8.56459C3.27811 6.77816 4.4188 5.21244 5.92145 4.05065C7.4241 2.88886 9.22654 2.17904 11.1179 2.00426C11.5104 1.96799 11.8876 2.16566 12.0811 2.50904ZM19.5608 14.6836C18.5077 15.0646 17.3781 15.2233 16.2441 15.1387C14.3333 14.9962 12.5371 14.1726 11.1822 12.8177C9.82729 11.4628 9.0037 9.66661 8.8612 7.7558C8.77664 6.62183 8.93528 5.4922 9.31629 4.43908C8.53868 4.72043 7.8055 5.12204 7.14478 5.63289C5.94266 6.56232 5.0301 7.81489 4.51389 9.24404C3.99767 10.6732 3.89914 12.2198 4.22984 13.7029C4.56054 15.186 5.30677 16.5442 6.38123 17.6187C7.45569 18.6931 8.81394 19.4394 10.297 19.7701C11.7801 20.1008 13.3267 20.0022 14.7559 19.486C16.185 18.9698 17.4376 18.0573 18.367 16.8551C18.8779 16.1944 19.2795 15.4612 19.5608 14.6836Z" fill="#212429"/>
+                    </svg>
+                </div> 
+            </div>
 
+            <h1 class="header__text">Reusable component library</h1>
+            <div id="header-menu" class="header__menu">
+                <div id="header-all" class="header__menu-item" active>All components</div>
+                <div id="header-element" class="header__menu-item">Elements</div>
+                <div id="header-container" class="header__menu-item">Containers</div>
+                <div id="header-template" class="header__menu-item">Templates</div>
+            </div>
+            <div id="burger-menu-open" class="header__burger-button">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 12H21" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M3 6H21" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M3 18H21" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </header>
+        <main id="main" class="main">
+            <div class="main-content">
+                <div class="container-block">
+                    <a class="container-block__item .template" href="pages/histogram.html">
+                        <div class="container-block__item-component">
+                            <!-- include component -->
+                            
+                            <div class="histogram">
+                                <div class="histogram__header">
+                                    <div class="histogram__title">
+                                        <div class="histogram__name">
+                                            Total orders
+                                        </div>
+                                        <div class="histogram__number">
+                                            50254
+                                        </div>
+                                    </div>
+                                    <div class="histogram__button" href="#">View all</div>
+                                </div>
+                                <div class="histogram__columns-block">
+                                    <div class="histogram__column" style="height: 12%"></div>
+                                    <div class="histogram__column" style="height: 32%"></div>
+                                    <div class="histogram__column" style="height: 40%"></div>
+                                    <div class="histogram__column" style="height: 86%"></div>
+                                    <div class="histogram__column" style="height: 54%"></div>
+                                    <div class="histogram__column" style="height: 35%"></div>
+                                    <div class="histogram__column" style="height: 12%"></div>
+                                    <div class="histogram__column" style="height: 32%"></div>
+                                    <div class="histogram__column" style="height: 76%"></div>
+                                    <div class="histogram__column" style="height: 45%"></div>
+                                    <div class="histogram__column" style="height: 12%"></div>
+                                    <div class="histogram__column" style="height: 32%"></div>
+                                    <div class="histogram__column" style="height: 56%"></div>
+                                    <div class="histogram__column" style="height: 87%"></div>
+                                    <div class="histogram__column" style="height: 32%"></div>
+                                    <div class="histogram__column" style="height: 66%"></div>
+                                    <div class="histogram__column" style="height: 66%"></div>
+                                    <div class="histogram__column" style="height: 32%"></div>
+                                    <div class="histogram__column" style="height: 65%"></div>
+                                    <div class="histogram__column" style="height: 16%"></div>
+                                </div>
+                            </div>
+                            <!-- end include component -->
+                        </div>
+                        <div class="container-block__item-title">
+                            <div class="container-block__item-name">
+                                Histogram
+                            </div> 
+                            <div class="container-block__item-type">
+                                Template
+                            </div>
+                        </div>
+                    </a>
+                    <a class="container-block__item .container" href="pages/avatar.html">
+                        <div class="container-block__item-component">
+                            <div class="avatar">
+                                <img class="avatar__img" src="./06-lection4/01-avatar/public/avatar-200.jpg">
+                            </div>
+                        </div>
+                        <div class="container-block__item-title">
+                            <div class="container-block__item-name">
+                                Avatar
+                            </div> 
+                            <div class="container-block__item-type">
+                                Container
+                            </div> 
+                        </div>
+                    </a>
+                    <a class="container-block__item .container" href="pages/tooltip.html">
+                        <div class="container-block__item-component">
+                            <!-- include component -->
+                            
+                            <div class="tooltip">
+                                <div class="tooltip__circle-around">
+                                    <div class="tooltip__question-mark"></div>
+                                </div>
+                                <div class="tooltip__modal-block">
+                                    <div class="tooltip__modal-block-text">Helper text</div>
+                                </div>
+                            </div>
+                            <!-- end include component -->                            
+                        </div>
+                        <div class="container-block__item-title">
+                            <div class="container-block__item-name">
+                                Tooltip
+                            </div> 
+                            <div class="container-block__item-type">
+                                Container
+                            </div> 
+                        </div>
+                    </a>
+                    <a class="container-block__item .container" href="pages/modal.html">
+                        <div class="container-block__item-component">
+                            <button id="modal-open" class="button button_primary modal__open-button">
+                                <span class="button__text">Push the tempo</span>
+                            </button>     
+                        </div>
+                        <div class="container-block__item-title">
+                            <div class="container-block__item-name">
+                                Modal
+                            </div> 
+                            <div class="container-block__item-type">
+                                Container
+                            </div> 
+                        </div>
+                    </a>
+                    <a class="container-block__item .template" href="pages/calendar.html">
+                        <div class="container-block__item-component">
+                            <!-- include component -->
+                            
+                            <div class="calendar">
+                                <div class="calendar__header">
+                                    February 2021
+                                </div>
+                                <div class="calendar__week">
+                                    <div class="calendar__week-day">Mon</div>
+                                    <div class="calendar__week-day">Tue</div>
+                                    <div class="calendar__week-day">Wed</div>
+                                    <div class="calendar__week-day">Thu</div>
+                                    <div class="calendar__week-day">Fri</div>
+                                    <div class="calendar__week-day">Sat</div>
+                                    <div class="calendar__week-day">Sun</div>
+                                </div>
+                                <div class="calendar__month">
+                                    <div class="calendar__day">1</div>
+                                    <div class="calendar__day">2</div>
+                                    <div class="calendar__day">3</div>
+                                    <div class="calendar__day">4</div>
+                                    <div class="calendar__day">5</div>
+                                    <div class="calendar__day">6</div>
+                                    <div class="calendar__day">7</div>
+                                    <div class="calendar__day">8</div>
+                                    <div class="calendar__day">9</div>
+                                    <div class="calendar__day calendar__day_active-first">10</div>
+                                    <div class="calendar__day calendar__day_active">11</div>
+                                    <div class="calendar__day calendar__day_active">12</div>
+                                    <div class="calendar__day calendar__day_active">13</div>
+                                    <div class="calendar__day calendar__day_active">14</div>
+                                    <div class="calendar__day calendar__day_active">15</div>
+                                    <div class="calendar__day calendar__day_active">16</div>
+                                    <div class="calendar__day calendar__day_active">17</div>
+                                    <div class="calendar__day calendar__day_active-last">18</div>
+                                    <div class="calendar__day">19</div>
+                                    <div class="calendar__day">20</div>
+                                    <div class="calendar__day">21</div>
+                                    <div class="calendar__day">22</div>
+                                    <div class="calendar__day">23</div>
+                                    <div class="calendar__day">24</div>
+                                    <div class="calendar__day">25</div>
+                                    <div class="calendar__day">26</div>
+                                    <div class="calendar__day">27</div>
+                                    <div class="calendar__day">28</div>
+                                </div>
+                            </div>
+                            <!-- end include component -->        
+                        </div>
+                        <div class="container-block__item-title">
+                            <div class="container-block__item-name">
+                                Calendar
+                            </div> 
+                            <div class="container-block__item-type">
+                                Template
+                            </div> 
+                        </div>
+                    </a>
+                    <a class="container-block__item .element" href="pages/skeleton.html">
+                        <div class="container-block__item-component">
+                            <!-- include component -->
+                            
+                            <div class="skeleton">
+                                <div class="skeleton__header">
+                                    <div class="skeleton__logo"></div>
+                                    <div class="skeleton__title">
+                                        <div class="skeleton__row skeleton__row_width_33"></div>
+                                        <div class="skeleton__row skeleton__row_width_50"></div>
+                                    </div>
+                                </div>
+                                <div class="skeleton__content">
+                                    <div class="skeleton__row"></div>
+                                    <div class="skeleton__row"></div>
+                                </div>
+                            </div>
+                            <!-- end include component -->
+                        </div>
+                        <div class="container-block__item-title">
+                            <div class="container-block__item-name">
+                                Skeleton
+                            </div> 
+                            <div class="container-block__item-type">
+                                Element
+                            </div> 
+                        </div>
+                    </a>
+                    <a class="container-block__item .element" href="pages/checkbox.html">
+                        <div class="container-block__item-component">
+                            <!-- include component -->
+                            <div class="checkbox-block">
+                                <label class="checkbox" >
+                                    <input type="checkbox" class="checkbox__control">
+                                    <div class="checkbox__state">
+                                        <div class="checkbox__icon">
+                                            <svg viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1.5 7.5L5 11L13 2" stroke="white" stroke-width="3" stroke-linecap="roundstroke-linejoin="round"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="checkbox__legend">Default</div>
+                                </label>
+                                <label class="checkbox" >
+                                    <input type="checkbox" class="checkbox__control" disabled>
+                                    <div class="checkbox__state">
+                                        <div class="checkbox__icon">
+                                            <svg viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1.5 7.5L5 11L13 2" stroke="white" stroke-width="3" stroke-linecap="roundstroke-linejoin="round"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="checkbox__legend">Disabled</div>
+                                </label>
+                            </div>
+                            <!-- end include component -->        
+                        </div>
+                        <div class="container-block__item-title">
+                            <div class="container-block__item-name">
+                                Checkbox
+                            </div> 
+                            <div class="container-block__item-type">
+                                Element
+                            </div> 
+                        </div>
+                    </a>
+                    <a class="container-block__item .element" href="pages/radiobutton.html">
+                        <div class="container-block__item-component">
+                            <!-- include component -->
+                            <div class="radiobutton-block">
+                                <label class="radiobutton">
+                                    <input type="radio" class="radiobutton__input">
+                                    <div class="radiobutton__state">
+                                        <div class="radiobutton__dot"></div>
+                                    </div>
+                                    <div class="radiobutton__text">Default</div>
+                                </label>
+                                <label class="radiobutton">
+                                    <input type="radio" class="radiobutton__input" disabled>
+                                    <div class="radiobutton__state">
+                                        <div class="radiobutton__dot"></div>
+                                    </div>
+                                    <div class="radiobutton__text">Default</div>
+                                </label>
+                            </div>
+                            <!-- end include component --> 
+                        </div>
+                        <div class="container-block__item-title">
+                            <div class="container-block__item-name">
+                                Radiobutton
+                            </div> 
+                            <div class="container-block__item-type">
+                                Element
+                            </div> 
+                        </div>
+                    </a>
+                    <a class="container-block__item .element" href="pages/toggler.html">
+                        <div class="container-block__item-component">
+                            <!-- include component -->
+                            <div class="toggler-block">
+                                <label class="toggler" >
+                                    <input type="checkbox" class="toggler__control">
+                                    <div class="toggler__state">
+                                        <div class="toggler__flag">
+                                        </div>
+                                    </div>
+                                    <div class="toggler__legend">Default</div>
+                                </label>
+                                <label class="toggler" >
+                                    <input type="checkbox" class="toggler__control" disabled>
+                                    <div class="toggler__state">
+                                        <div class="toggler__flag">
+                                        </div>
+                                    </div>
+                                    <div class="toggler__legend">Disabled</div>
+                                </label>    
+                            </div>
+                            <!-- end include component --> 
+                        </div>
+                        <div class="container-block__item-title">
+                            <div class="container-block__item-name">
+                                Toggler
+                            </div> 
+                            <div class="container-block__item-type">
+                                Element
+                            </div> 
+                        </div>
+                    </a>
+                    <a class="container-block__item .element" href="pages/input.html">
+                        <div class="container-block__item-component">
+                            <!-- include component -->
+                            <label class="input">
+                                <span class="input__label">Label</span>
+                                <input class="input__field" pattern="\d*" name="lastname" placeholder="placeholder">
+                                <div class="input__state"></div>
+                            </label>
+                            <label class="input">
+                                <span class="input__label">Disabled</span>
+                                <input class="input__field" type="text" name="lastname" placeholder="placeholder" disabled>
+                                <div class="input__state"></div>
+                            </label>
+                            <!-- end include component --> 
+                        </div>
+                        <div class="container-block__item-title">
+                            <div class="container-block__item-name">
+                                Input
+                            </div> 
+                            <div class="container-block__item-type">
+                                Element
+                            </div> 
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </main>
+        <footer id="footer" class="footer">
+            <div class="about-block">
+                <div class="about-block__title">
+                    Footer
+                </div>
+                <div class="about-block__text">
+                    This project is a collection of professionally designed, pre-built, fully responsive HTML snippets you can drop into your projects. Get started by checking out our free preview components, or browsing the PNG previews in the categories you're most curious about.
+                </div>
+        </footer>
+        <!-- include component -->
+        <div id="modal" class="modal">
+            <div class="modal__container">
+                <div id="modal-close" class="modal__close-button">
+                    <div class="modal__close-mark"></div>
+                </div>
+                <div class="modal__header">Modal header</div>
+                <div class="modal__content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente, quodtotamnumquam doloremque iusto, voluptates obcaecati, velit animi vitae blanditiis tempora. Doloremque,fugit.Fuga ipsa excepturi odio similique possimus voluptates.</div>
+            </div>
+        </div>
+        <!-- end include component -->   
+        <!-- include component -->
+        <div id="burger-menu" class="menu">
+            <div class="menu__header">
+                <div id="burger-menu-close" class="menu__close-button">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="16" cy="16" r="16" fill="#DDE2E5"/>
+                        <path d="M22 10L10 22" stroke="#212429" stroke-width="2" stroke-linecap="roundstroke-linejoin="round"/>
+                        <path d="M10 10L22 22" stroke="#212429" stroke-width="2" stroke-linecap="roundstroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="menu__header-logo header__logo">
+                    <a href="index.html">
+                        <svg width="110" height="32" viewBox="0 0 110 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect y="1" width="30" height="30" fill="#212429"/>
+                            <rect x="38" width="32" height="32" rx="16" fill="#212429"/>
+                            <path d="M78 0L110 32H78V0Z" fill="#212429"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="menu__content">
+                <div class="menu__mode-block">
+                    <div class="menu__mode-text">Dark mode</div>
+                    <div class="menu__mode-toggler">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8ZM6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18C8.68629 18 6 15.3137 6 12Z" fill="#212429"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C12.5523 0 13 0.447715 13 1V3C13 3.55228 12.5523 4 12 4C11.4477 4 11 3.55228 11 3V1C11 0.447715 11.4477 0 12 0Z" fill="#212429"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 20C12.5523 20 13 20.4477 13 21V23C13 23.5523 12.5523 24 12 24C11.4477 24 11 23.5523 11 23V21C11 20.4477 11.4477 20 12 20Z" fill="#212429"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.51286 3.51286C3.90339 3.12234 4.53655 3.12234 4.92708 3.51286L6.34708 4.93286C6.7376 5.32339 6.7376 5.95655 6.34708 6.34708C5.95655 6.7376 5.32339 6.7376 4.93286 6.34708L3.51286 4.92708C3.12234 4.53655 3.12234 3.90339 3.51286 3.51286Z" fill="#212429"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.653 17.6529C18.0435 17.2624 18.6767 17.2624 19.0672 17.6529L20.4872 19.0729C20.8777 19.4634 20.8777 20.0966 20.4872 20.4871C20.0967 20.8776 19.4635 20.8776 19.073 20.4871L17.653 19.0671C17.2625 18.6766 17.2625 18.0434 17.653 17.6529Z" fill="#212429"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 12C0 11.4477 0.447715 11 1 11H3C3.55228 11 4 11.4477 4 12C4 12.5523 3.55228 13 3 13H1C0.447715 13 0 12.5523 0 12Z" fill="#212429"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M20 12C20 11.4477 20.4477 11 21 11H23C23.5523 11 24 11.4477 24 12C24 12.5523 23.5523 13 23 13H21C20.4477 13 20 12.5523 20 12Z" fill="#212429"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.34708 17.6529C6.7376 18.0434 6.7376 18.6766 6.34708 19.0671L4.92708 20.4871C4.53655 20.8776 3.90339 20.8776 3.51286 20.4871C3.12234 20.0966 3.12234 19.4634 3.51286 19.0729L4.93286 17.6529C5.32339 17.2624 5.95655 17.2624 6.34708 17.6529Z" fill="#212429"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M20.4872 3.51286C20.8777 3.90339 20.8777 4.53655 20.4872 4.92708L19.0672 6.34708C18.6767 6.7376 18.0435 6.7376 17.653 6.34708C17.2625 5.95655 17.2625 5.32339 17.653 4.93286L19.073 3.51286C19.4635 3.12234 20.0967 3.12234 20.4872 3.51286Z" fill="#212429"/>
+                        </svg>  
+                        <label class="toggler" >
+                            <input id="theme-changer" type="checkbox" class="toggler__control theme-changer__control">
+                            <div class="toggler__state">
+                                <div class="toggler__flag">
+                                </div>
+                            </div>
+                            <div class="toggler__legend">
+                            </div>
+                        </label>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0811 2.50904C12.2746 2.85242 12.2484 3.27745 12.0141 3.59442C11.1598 4.75008 10.7488 6.17395 10.8557 7.60706C10.9625 9.04018 11.5802 10.3873 12.5964 11.4035C13.6126 12.4197 14.9597 13.0374 16.3929 13.1443C17.826 13.2511 19.2498 12.8401 20.4055 11.9859L20.9999 12.79L21.9957 12.882C21.8209 14.7734 21.1111 16.5758 19.9493 18.0785C18.7875 19.5811 17.2218 20.7218 15.4353 21.3671C13.6489 22.0124 11.7156 22.1355 9.86177 21.7221C8.0079 21.3088 6.3101 20.376 4.96702 19.0329C3.62394 17.6898 2.69115 15.992 2.27778 14.1381C1.86441 12.2843 1.98757 10.351 2.63284 8.56459C3.27811 6.77816 4.4188 5.21244 5.92145 4.05065C7.4241 2.88886 9.22654 2.17904 11.1179 2.00426C11.5104 1.96799 11.8876 2.16566 12.0811 2.50904ZM19.5608 14.6836C18.5077 15.0646 17.3781 15.2233 16.2441 15.1387C14.3333 14.9962 12.5371 14.1726 11.1822 12.8177C9.82729 11.4628 9.0037 9.66661 8.8612 7.7558C8.77664 6.62183 8.93528 5.4922 9.31629 4.43908C8.53868 4.72043 7.8055 5.12204 7.14478 5.63289C5.94266 6.56232 5.0301 7.81489 4.51389 9.24404C3.99767 10.6732 3.89914 12.2198 4.22984 13.7029C4.56054 15.186 5.30677 16.5442 6.38123 17.6187C7.45569 18.6931 8.81394 19.4394 10.297 19.7701C11.7801 20.1008 13.3267 20.0022 14.7559 19.486C16.185 18.9698 17.4376 18.0573 18.367 16.8551C18.8779 16.1944 19.2795 15.4612 19.5608 14.6836Z" fill="#212429"/>
+                        </svg>
+                    </div> 
+                </div>
+                <div class="menu__filter-block">
+                    <div class="menu__filter-header">Elements</div>
+                    <a class="menu__filter-item" href="./pages/skeleton.html">Skeleton</a>
+                    <a class="menu__filter-item" href="./pages/checkbox.html">Checkbox</a>
+                    <a class="menu__filter-item" href="./pages/radiobutton.html">Radiobutton</a>
+                    <a class="menu__filter-item" href="./pages/toggler.html">Toggler</a> 
+                    <a class="menu__filter-item" href="./pages/input.html">Input</a>
+                </div>
+                <div class="menu__filter-block">
+                    <div class="menu__filter-header">Containers</div>
+                    <a class="menu__filter-item" href="./pages/tooltip.html">Tooltip</a>
+                    <a class="menu__filter-item" href="./pages/modal.html">Modal</a>
+                    <a class="menu__filter-item" href="./pages/avatar.html">Avatar</a>
+                </div>
+                <div class="menu__filter-block">
+                    <div class="menu__filter-header">Templates</div>
+                    <a class="menu__filter-item" href="./pages/histogram.html">Histogram</a>
+                    <a class="menu__filter-item" href="./pages/calendar.html">Calendar</a>
+                </div>
+            </div>
+        
+        </div>
+        <!-- end include component -->
     </body>
+    <script src="./assets/js/index.js"></script> 
 </html>

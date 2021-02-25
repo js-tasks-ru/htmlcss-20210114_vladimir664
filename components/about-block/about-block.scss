@@ -1,0 +1,23 @@
+.about-block {
+	padding: 72px 16px 136px 16px;
+	text-align: center;
+
+	&__title {
+		font-weight: 500;
+		font-size: 38px;
+		line-height: 48px;
+		padding-bottom: 38px;
+	}
+
+	&__text {
+		font-weight: 400px;
+		font-size: 16px;
+		line-height: 24px;
+		max-width: 640px;
+		margin: auto;
+	}
+}
+
+.footer[data-open] {
+	display: none;
+}

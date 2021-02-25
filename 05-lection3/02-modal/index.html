@@ -2,11 +2,22 @@
 <!-- Страница с модалкой -->
 <html lang="ru">
     <head>
-        <link rel="stylesheet" href="../../assets/css/main.css">
-        <link rel="stylesheet" href="./modal.css">
+        <link rel="stylesheet" href="../../assets/css/build/main.css">
         <title>Modal</title>
     </head>
     <body>
+        <button id="modal-open" class="button button_primary modal__open-button">
+            <span class="button__text">Push the tempo</span>
+        </button>            
+        <div id="modal" class="modal">
+            <div class="modal__container">
+                <div id="modal-close" class="modal__close-button">
+                    <div class="modal__close-mark"></div>
+                </div>
+                <div class="modal__header">Modal header</div>
+                <div class="modal__content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente, quod totam numquam doloremque iusto, voluptates obcaecati, velit animi vitae blanditiis tempora. Doloremque, fugit. Fuga ipsa excepturi odio similique possimus voluptates.</div>
+            </div>
+        </div>
     </body>
-    <script src="./index.js"></script> 
+    <script src="./index.js"></script>
 </html>

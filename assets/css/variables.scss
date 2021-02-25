@@ -1,0 +1,88 @@
+:root { 
+    //BUTTONS
+    --button-font-size: 16px;
+    --button-font-weight: 500;
+
+    /*primary*/
+    --primary-background-color: #4263EB;
+    --primary-hover-not-disabled-color: #2342C0;
+
+    /*secondary*/
+    --secondary-background-color: #7048E8;
+    --secondary-hover-not-disabled-color: #5028C6;
+
+    /*alternate*/
+    --alternate-color: #495057;
+
+    //ACCORDION
+    --accordion-marker-color: #495057;
+    --accordion-border-color: #ACB5BD;
+    --accordion-border-hover: #bebebe;
+    --accordion-border-radius: 8px;
+    --accordion-margin-bottom: 8px;
+    --accordion-summary-font-weight: 400;
+    --accordion-summary-font-size: 16px;
+    --accordion-summary-color: #212429;
+    --accordion-details-text-color: #495057;
+
+    //HISTOGRAM
+    --histogram-column-color: #4263EB;
+    --histogram-font-size: 6px;
+    --histogram-line-height: 9px;
+    --histogram-number-font-size: 8px;
+    --histogram-number-line-height: 11px;
+    --histogram-border-color: #ACB5BD;
+
+    //SKELETON
+    --skeleton-border: 1px solid #ACB5BD;
+    --skeleton-logo-background-color: #DDE2E5;
+    --skeleton-row-background: linear-gradient(0.25turn, #DDE2E5, #E2E6E8, #F3F5F5,#E3E7EA,#DDE2E5);
+
+    //TOOLTIP
+    --tooltip-scale: scale(0.3);
+    --tooltip-modal-block-color: #4263EB;
+    --tooltip-modal-block-text: #fff;
+    --tooltip-font-size: 4rem;
+
+    //MODAL
+    --modal-bg-color: #c4c4c4ab;
+    --modal-container-color: #fff;
+    --modal-font-size: 24px;
+    --modal-font-weight: 500;
+
+    //CALENDAR
+    --calendar-header-font-weight: 600;
+    --calendar-font-size: 14px;
+    --calendar-line-height: 16px;
+    --calendar-day-font-size: 8px;
+    --calendar-day-active-bg: #A0B1F5;
+    --calendar-day-active-fl-bg: #4263EB;
+    --calendar-day-active-fl-color: #fff;
+    --calendar-week-font-size: 8px;
+
+    //CHECKBOX
+    --checkbox-active-color: #4263EB;
+    --checkbox-disable-color:#DDE2E5;
+    --checkbox-border: 1px solid #DDE2E5;
+
+    //RADIOBUTTON
+    --radiobutton-active-color: #4263EB;
+    --radiobutton-disable-color:#DDE2E5;
+
+    //TOGGLER
+    --toggler-active-color: #4263EB;
+    --toggler-disable-color:#DDE2E5;
+    --toggler-flag-color:#ACB5BD;
+
+    //INPUT
+    --input-height: 48px;
+    --input-font-size: 16px;
+    --input-border: 1px solid #DDE2E5;
+    --input-padding: 30px;
+    --input-padding-focus: 30px;
+    --input-border-radius: 6px;
+    --input-placeholder-color: #495057;
+    --input-disabled: #ACB5BD;
+    --input-border-invalid: 1px solid #F03D3E;
+    --input-border-valid:  1px solid #4263EB;
+}

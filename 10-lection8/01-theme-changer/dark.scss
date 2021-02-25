@@ -1,0 +1,68 @@
+html[data-theme-dark] {
+	background-color: #212429;
+
+    //color: #86888b
+    .about-block,
+    .container-block__item,
+    .header__text,
+    .main-content,
+    .menu ,
+    .menu__content,
+    .template,
+    .template__footer,
+    .template__main {
+        color: #86888b;        
+    }
+
+    //background-color: #212429;
+    .container-block__item,
+    .menu,
+    .menu__content,
+    .template__footer,
+    .template {
+        background-color: #212429;
+    }
+
+    //background-color:#495057;
+    .main-content,
+    .template__main {
+		background-color:#495057;
+    }
+    
+    //fill: #f8f9fa;
+    .menu__mode-toggler rect,
+    .menu__mode-toggler path ,
+    .header__logo rect,
+    .header__logo path ,
+    .header__toggler path,
+    .header__toggler rect{
+        fill: #f8f9fa;
+    }
+
+    //color: #f8f9fa;
+    .menu__filter-item,
+    .component__header,
+    .component__code-tab[active],
+    .header__menu-item[active],
+    .container-block__item-name {
+        color: #f8f9fa;
+    }
+
+    //border-color: #f8f9fa;
+    .menu__filter-item,
+    .component__header,
+    .component__code-tab[active],
+    .header__menu-item[active],
+    .tooltip__circle-around {
+        border-color: #f8f9fa;
+    }
+
+    .tooltip__question-mark {
+        border-color: #f8f9fa #f8f9fa rgba(0,0,0,0);;
+    }
+
+    .tooltip__question-mark:before,
+    .component__code-container {
+        background-color: #f8f9fa;
+    }   
+}

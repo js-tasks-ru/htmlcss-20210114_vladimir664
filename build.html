@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<!-- Главная страница -->
+<html lang="ru">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./assets/css/build/main.css">
+        <script defer src="./10-lection8/01-theme-changer/theme-changer.js"></script>
+        <title>HTML/CSS project</title>
+    </head>
+    <body>
+        <header id="header" class="header">
+            <div class="header__top">
+                <div class="header__logo">
+                    //= ./components/logo/logo.html
+                </div>
+                <div class="header__toggler">
+                    //= ./components/mode-toggler/mode-toggler.html
+                </div> 
+            </div>
+
+            <h1 class="header__text">Reusable component library</h1>
+            <div id="header-menu" class="header__menu">
+                <div id="header-all" class="header__menu-item" active>All components</div>
+                <div id="header-element" class="header__menu-item">Elements</div>
+                <div id="header-container" class="header__menu-item">Containers</div>
+                <div id="header-template" class="header__menu-item">Templates</div>
+            </div>
+            <div id="burger-menu-open" class="header__burger-button">
+                //= ./components/burger-button/burger-button.html
+            </div>
+        </header>
+        <main id="main" class="main">
+            <div class="main-content">
+                <div class="container-block">
+                    <a class="container-block__item .template" href="pages/histogram.html">
+                        <div class="container-block__item-component">
+                            <!-- include component -->
+                            //= ./04-lection2/01-histogram/histogram.html
+                            <!-- end include component -->
+                        </div>
+                        <div class="container-block__item-title">
+                            <div class="container-block__item-name">
+                                Histogram
+                            </div> 
+                            <div class="container-block__item-type">
+                                Template
+                            </div>
+                        </div>
+                    </a>
+                    <a class="container-block__item .container" href="pages/avatar.html">
+                        <div class="container-block__item-component">
+                            <div class="avatar">
+                                <img class="avatar__img" src="./06-lection4/01-avatar/public/avatar-200.jpg">
+                            </div>
+                        </div>
+                        <div class="container-block__item-title">
+                            <div class="container-block__item-name">
+                                Avatar
+                            </div> 
+                            <div class="container-block__item-type">
+                                Container
+                            </div> 
+                        </div>
+                    </a>
+                    <a class="container-block__item .container" href="pages/tooltip.html">
+                        <div class="container-block__item-component">
+                            <!-- include component -->
+                            //= ./05-lection3/01-tooltip/tooltip.html
+                            <!-- end include component -->                            
+                        </div>
+                        <div class="container-block__item-title">
+                            <div class="container-block__item-name">
+                                Tooltip
+                            </div> 
+                            <div class="container-block__item-type">
+                                Container
+                            </div> 
+                        </div>
+                    </a>
+                    <a class="container-block__item .container" href="pages/modal.html">
+                        <div class="container-block__item-component">
+                            <button id="modal-open" class="button button_primary modal__open-button">
+                                <span class="button__text">Push the tempo</span>
+                            </button>     
+                        </div>
+                        <div class="container-block__item-title">
+                            <div class="container-block__item-name">
+                                Modal
+                            </div> 
+                            <div class="container-block__item-type">
+                                Container
+                            </div> 
+                        </div>
+                    </a>
+                    <a class="container-block__item .template" href="pages/calendar.html">
+                        <div class="container-block__item-component">
+                            <!-- include component -->
+                            //= ./05-lection3/03-calendar/calendar.html
+                            <!-- end include component -->        
+                        </div>
+                        <div class="container-block__item-title">
+                            <div class="container-block__item-name">
+                                Calendar
+                            </div> 
+                            <div class="container-block__item-type">
+                                Template
+                            </div> 
+                        </div>
+                    </a>
+                    <a class="container-block__item .element" href="pages/skeleton.html">
+                        <div class="container-block__item-component">
+                            <!-- include component -->
+                            //= ./04-lection2/02-skeleton/skeleton.html
+                            <!-- end include component -->
+                        </div>
+                        <div class="container-block__item-title">
+                            <div class="container-block__item-name">
+                                Skeleton
+                            </div> 
+                            <div class="container-block__item-type">
+                                Element
+                            </div> 
+                        </div>
+                    </a>
+                    <a class="container-block__item .element" href="pages/checkbox.html">
+                        <div class="container-block__item-component">
+                            <!-- include component -->
+                            //= ./07-lection5/01-checkbox/checkbox.html
+                            <!-- end include component -->        
+                        </div>
+                        <div class="container-block__item-title">
+                            <div class="container-block__item-name">
+                                Checkbox
+                            </div> 
+                            <div class="container-block__item-type">
+                                Element
+                            </div> 
+                        </div>
+                    </a>
+                    <a class="container-block__item .element" href="pages/radiobutton.html">
+                        <div class="container-block__item-component">
+                            <!-- include component -->
+                            //= ./07-lection5/02-radio/radio.html
+                            <!-- end include component --> 
+                        </div>
+                        <div class="container-block__item-title">
+                            <div class="container-block__item-name">
+                                Radiobutton
+                            </div> 
+                            <div class="container-block__item-type">
+                                Element
+                            </div> 
+                        </div>
+                    </a>
+                    <a class="container-block__item .element" href="pages/toggler.html">
+                        <div class="container-block__item-component">
+                            <!-- include component -->
+                            //= ./07-lection5/03-toggler/toggler.html
+                            <!-- end include component --> 
+                        </div>
+                        <div class="container-block__item-title">
+                            <div class="container-block__item-name">
+                                Toggler
+                            </div> 
+                            <div class="container-block__item-type">
+                                Element
+                            </div> 
+                        </div>
+                    </a>
+                    <a class="container-block__item .element" href="pages/input.html">
+                        <div class="container-block__item-component">
+                            <!-- include component -->
+                            //= ./07-lection5/04-input/input.html
+                            <!-- end include component --> 
+                        </div>
+                        <div class="container-block__item-title">
+                            <div class="container-block__item-name">
+                                Input
+                            </div> 
+                            <div class="container-block__item-type">
+                                Element
+                            </div> 
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </main>
+        <footer id="footer" class="footer">
+            <div class="about-block">
+                <div class="about-block__title">
+                    Footer
+                </div>
+                <div class="about-block__text">
+                    This project is a collection of professionally designed, pre-built, fully responsive HTML snippets you can drop into your projects. Get started by checking out our free preview components, or browsing the PNG previews in the categories you're most curious about.
+                </div>
+        </footer>
+        <!-- include component -->
+        //= ./05-lection3/02-modal/modal.html
+        <!-- end include component -->   
+        <!-- include component -->
+        //= ./09-lection7/01-burger-menu/menu.html
+        <!-- end include component -->
+    </body>
+    <script src="./assets/js/index.js"></script> 
+</html>
