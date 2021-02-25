@@ -47,7 +47,7 @@
 
     /**header filters */
     const headerMenuItems = document.querySelectorAll('div.header__menu-item');
-    const blockItems =  document.querySelectorAll('div.container-block__item');
+    const blockItems =  document.querySelectorAll('a.container-block__item');
 
 
     if(headerMenuItems.length && blockItems.length) {

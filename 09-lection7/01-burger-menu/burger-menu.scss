@@ -31,6 +31,10 @@
         display: none;
     }
 
+    &__header-logo {
+        padding: 16px;
+    }
+
     &__content {
         padding: 16px;
         background-color: #fff;
@@ -43,11 +47,17 @@
         justify-content: space-between;
         padding: 29px 0 24px 0;
         border-top: 1px solid #DDE2E5;
-/*         border-bottom: 1px solid #DDE2E5;
- */
-        .toggler {
-            margin: 0;
-        }
+        align-items: center;
+    }
+
+    &__mode-toggler {
+		display: flex;
+		align-items: center;
+
+		.toggler {
+			margin: 0;
+			padding-left: 14px;
+		}
     }
 
     &__filter-block {
